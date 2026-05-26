@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Header from '@/components/Header';
 import { Outfit, DM_Sans } from "next/font/google";
+import { ThemeProvider } from 'next-themes';
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -12,7 +12,6 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: 'John Perez — UX Designer',
@@ -25,9 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange={false}>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

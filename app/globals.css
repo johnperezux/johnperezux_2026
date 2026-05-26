@@ -1,17 +1,4 @@
 @import 'tailwindcss';
-/* 
-
-/* 
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
-
-
 
 :root {
   --background: #12141C;
@@ -21,7 +8,16 @@
   --accent-two: #97A7BF;
   --font-outfit: var(--font-outfit);
   --font-dm-sans: var(--font-dm-sans);
-} 
+}
+
+/* Light theme — applied when next-themes adds class="light" to <html> */
+:root.light {
+  --background: #FAFAFA;
+  --foreground: #c2dbe1;
+  --secondary: #12141C;
+  --accent: #ED3E33;
+  --accent-two: #4A5568;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -30,26 +26,80 @@
   --font-dm-sans: var(--font-dm-sans);
 }
 
-
 body {
   background-color: var(--background);
   color: var(--secondary);
+  transition: background-color 0.3s ease, color 0.3s ease; /* smooth switch */
 }
+
+.header_links_container a, 
+.header_links_container span { 
+  display: inline-block;
+  /* animation: appear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;  */
+} 
+
+/* @keyframes appear { 
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px) scale(0.9); 
+    filter: blur(5px); 
+  } 
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+    filter: blur(0); 
+  } 
+} */
 
 
 a.hero_link, span.hero_link{
   font-family: var(--font-dm-sans);
-  color: var(--accent-two)
+  color: var(--accent-two);
+  text-transform: capitalize;
+  font-size: 1rem;
+  transition: color 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+a.hero_link:hover, a.hero_link:focus{
+  color: var(--accent);
 }
 
 span.bright_dot.hero_link::before {
   content: '';
   display: inline-flex;
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   background-color: #32B246;
   border-radius: 100%;
   margin-right: 15px;
   align-items: center;
   box-shadow: 0 0 6px 2px #57ca68;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+
+@keyframes pulse-glow {
+  0%, 100% {
+    /* Initial state: subtle glow */
+    box-shadow: 0 0 10px #57ca68, 0 0 20px #57ca68;
+  }
+  50% {
+    /* Mid-animation: intense, expanded glow */
+    box-shadow: 0 0 12px #57ca68, 0 0 24px #57ca68, 0 0 32px #57ca68;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger_menu_container {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .header_links_container {
+    display: none;
+  }
 }
