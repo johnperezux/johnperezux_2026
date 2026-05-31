@@ -3,6 +3,10 @@
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { LightTheme } from './dark_light_mode';
+import { DarkTheme } from './dark_light_mode';
+import {Logo} from "@/components/Logo";
+
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -28,7 +32,9 @@ export default function Header() {
           </div>
 
           <div className="header_links_container flex flex-row gap-[60px]">
-            <span className="bright_dot hero_link flex items-center">I'm Available To Work</span>
+            {/* <a className="hero_link" href="https://www.linkedin.com/in/johnperezux/" target="_blank" rel="noopener noreferrer">
+              <span className="bright_dot hero_link flex items-center">Available for Hire</span>
+            </a> */}
             <a className="hero_link" href="#work"><span>See My Work</span></a>
 
             <div className="theme_toggle_container">
@@ -39,23 +45,9 @@ export default function Header() {
                   aria-label="Toggle theme"
                 >
                   {theme === 'dark' ? (
-                    <Image
-                      src="/light.svg"
-                      alt="Switch to light mode"
-                      width={30}
-                      height={30}
-                      loading="eager"
-                      style={{ height: 'auto' }}
-                    />
+                    <LightTheme className="theme_icon" />
                   ) : (
-                    <Image
-                      src="/dark.svg"
-                      alt="Switch to dark mode"
-                      width={30}
-                      height={30}
-                      loading="eager"
-                      style={{ height: 'auto' }}
-                    />
+                    <DarkTheme className="theme_icon" />
                   )}
                 </button>
               )}
