@@ -20,14 +20,7 @@ export default function Header() {
         <div className="header_container flex justify-between flex-row items-center">
           <div className="header_logo_container">
             <a href="#home">
-              <Image
-                src="/jp_logo.svg"
-                alt="John Perez logo"
-                width={80}
-                height={80}
-                loading="eager"
-                style={{ height: 'auto' }}
-              />
+              <Logo className="header_logo" />
             </a>
           </div>
 
