@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/*********************
+Root Styles 
+**********************/
 :root {
   --background: #12141C;
   --foreground: #0c1333;
@@ -8,12 +11,12 @@
   --accent-two: #97A7BF;
   --font-outfit: var(--font-outfit);
   --font-dm-sans: var(--font-dm-sans);
-  --font-size-p-large: clamp(1.15rem, 2vw, 1.875rem);
+  --font-size-p-large: clamp(1.15rem, 5vw, 1.875rem);
 }
 
 :root.light {
   --background: #FAFAFA;
-  --foreground: #E0E0E0;
+  --foreground: #ebebeb;
   --secondary: #12141C;
   --accent: #006AF5;
   --accent-two: #2E3A4D;
@@ -26,53 +29,136 @@
   --font-dm-sans: var(--font-dm-sans);
 }
 
+
+/*********************
+HTML Styles 
+**********************/
 body {
   background-color: var(--background);
   color: var(--secondary);
-  transition: background-color 0.3s ease, color 0.3s ease; /* smooth switch */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 h1{
   font-family: var(--font-outfit);
-  font-size: clamp(3.125rem, 5vw, 6.25rem) !important;
+  font-size: clamp(3.125rem, 10vw, 6.25rem) !important;
   font-weight: 700;
   margin-bottom: 15px;  
 }
+
+h2{
+  font-family: var(--font-outfit);
+  font-size: clamp(2.25rem, 5vw, 3.75rem) !important;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+p{
+  font-family: var(--font-dm-sans);
+  color: var(--accent-two);
+  font-size: 1rem;
+  line-height: 1.625rem;
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right:20px;
+}
+
+
+
+/*********************
+Hero Styles 
+**********************/
+.hero_container{
+  height: 100%;
+}
+
 
 span.hero{ 
 font-family: var(--font-dm-sans);
 text-transform: uppercase;
 color: var(--accent);
 letter-spacing: 21%;
+font-size: clamp(0.875rem, 5vw, 1.5rem);
+font-weight: 700;
 }
 
 p.hero {
   font-family: var(--font-dm-sans);
   color: var(--accent-two);
   font-size: clamp(1.15rem, 2vw, 1.875rem);
-  margin-bottom: 75px;
+  margin-bottom: 60px;
+    line-height: 1.5;
+
 }
 
-a.hero_button{
+/*********************
+Buttons Styles 
+**********************/
+
+a.hero_button {
   font-family: var(--font-outfit);
-  color: var(--secondary);
   background-color: var(--background);
-  padding: 24px 30px;
+  color: var(--secondary);
+  padding: 24px 30px; 
   border-radius: 100px;
+  text-transform: capitalize;
+  font-size: var(--font-size-p-large);
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+a.hero_button.default {
+  background-color: var(--foreground);
+  font-size: clamp(1.15rem, 5vw, 1.5rem) !important;
+}
+
+.default span.button_arrow svg {
+  width: 30px;
+  height: auto;
+  fill: var(--accent);
+  transform: rotate(-60deg);
+  transition: transform 0.4s ease-in-out, fill 0.4s ease-in-out;
 }
 
 
+a.hero_button:hover {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+span.button_arrow svg {
+  width: 40px;
+  height: auto;
+  fill: var(--accent);
+  transform: rotate(-60deg);
+  transition: transform 0.4s ease-in-out, fill 0.4s ease-in-out;
+}
+
+a.hero_button:hover span.button_arrow svg {
+  transform: rotate(0deg);
+  fill: var(--background);
+}
+
+
+
+/*********************
+Header Styles 
+**********************/
 
 .header_links_container a, 
 .header_links_container span { 
   display: inline-block;
 } 
 
-
-.hero_container{
-  height: 100%;
-}
 
 a.hero_link, span.hero_link{
   font-family: var(--font-dm-sans);
@@ -90,8 +176,6 @@ a.hero_link:hover, a.hero_link:focus {
     transition: color 0.4s ease-in-out;
 }
 
-
-
 span.bright_dot.hero_link::before {
   content: '';
   display: inline-flex;
@@ -107,11 +191,9 @@ span.bright_dot.hero_link::before {
 
 @keyframes pulse-glow {
   0%, 100% {
-    /* Initial state: subtle glow */
     box-shadow: 0 0 10px #57ca68, 0 0 20px #57ca68;
   }
   50% {
-    /* Mid-animation: intense, expanded glow */
     box-shadow: 0 0 12px #57ca68, 0 0 24px #57ca68, 0 0 32px #57ca68;
   }
 }
@@ -166,8 +248,25 @@ svg.theme_icon:hover {
 }
 
 
+/*********************
+Home Intro Styles 
+**********************/
 
-/* Media Query Styles */
+.intro_content{
+  margin:auto;  
+  margin-top: 120px;
+}
+
+.intro_text{
+  margin-bottom: 60px;
+}
+
+
+
+/*********************
+Media Query Styles 
+**********************/
+
 @media screen and (min-width: 768px) {
   .hamburger_menu_container {
     display: none;
@@ -178,5 +277,10 @@ svg.theme_icon:hover {
 @media screen and (max-width: 768px) {
   .header_links_container, .mouse_scroll_box {
     display: none;
+  }
+
+  span.button_arrow svg {
+    width: 24px;
+    height: auto;
   }
 }

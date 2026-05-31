@@ -29,6 +29,7 @@ export default function Header() {
               <span className="bright_dot hero_link flex items-center">Available for Hire</span>
             </a> */}
             <a className="hero_link" href="#work"><span>See My Work</span></a>
+            <a className="hero_link" href="#resume"><span>Resume</span></a>
 
             <div className="theme_toggle_container">
               {mounted && (
