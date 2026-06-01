@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Button from "@/components/Button";
+import Cards from "@/components/Cards";
 
 export default function Home() {
   return (
@@ -11,10 +12,21 @@ export default function Home() {
             <div className="w-100% max-w-[777px] text-center intro_content">
               <h2>I <span style={{ color: 'var(--accent)' }}>Build</span> Websites for a living</h2>
               <p className="intro_text mb-[60px]">I graduated from the University of Central Florida with a Bachelor's degree in Web & Social Platforms. Throughout my time there, I developed a strong foundation in web development, working with various coding languages and frameworks to build modern websites.</p>
-             <Button label="See my work" href="#projects" />
+             <Button className="default" label="Let's Connect" href="#projects" />
+             <div className="see_work_container mt-[1px] flex items-center justify-center flex-col gap-[15px]">
+              <span className="see_work_line"></span>
+            </div>
           </div>
         </div>  
       </section>
+      { /* Tools Section */ }
+      <section className="tools_section" id="tools">
+        <div className="tools_container container">
+          <Cards/>
+        </div>
+      </section>
+      
+
     </main>
   );
 }  

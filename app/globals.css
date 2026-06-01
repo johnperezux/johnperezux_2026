@@ -4,7 +4,7 @@
 Root Styles 
 **********************/
 :root {
-  --background: #12141C;
+  --background: #050817;
   --foreground: #0c1333;
   --secondary: #FAFAFA;
   --accent: #ED3E33;
@@ -17,7 +17,7 @@ Root Styles
 :root.light {
   --background: #FAFAFA;
   --foreground: #ebebeb;
-  --secondary: #12141C;
+  --secondary: #050817;
   --accent: #006AF5;
   --accent-two: #2E3A4D;
 }
@@ -29,7 +29,6 @@ Root Styles
   --font-dm-sans: var(--font-dm-sans);
 }
 
-
 /*********************
 HTML Styles 
 **********************/
@@ -39,11 +38,14 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
+
 h1{
   font-family: var(--font-outfit);
-  font-size: clamp(3.125rem, 10vw, 6.25rem) !important;
+  font-size: clamp(3.125rem, 5vw, 6.25rem) !important;
   font-weight: 700;
   margin-bottom: 15px;  
+  line-height: 1.1;
 }
 
 h2{
@@ -52,6 +54,12 @@ h2{
   font-weight: 700;
   margin-bottom: 30px;
   text-transform: capitalize;
+}
+
+h3{
+  font-family: var(--font-outfit);
+  font-size: clamp(1.25rem, 5vw, 2rem) !important;
+  font-weight: 700;
 }
 
 p{
@@ -85,7 +93,7 @@ font-family: var(--font-dm-sans);
 text-transform: uppercase;
 color: var(--accent);
 letter-spacing: 21%;
-font-size: clamp(0.875rem, 5vw, 1.5rem);
+font-size: clamp(0.875rem, 5vw, 1.25rem);
 font-weight: 700;
 }
 
@@ -106,10 +114,10 @@ a.hero_button {
   font-family: var(--font-outfit);
   background-color: var(--background);
   color: var(--secondary);
-  padding: 24px 30px; 
+  padding: 14px 20px; 
   border-radius: 100px;
   text-transform: capitalize;
-  font-size: var(--font-size-p-large);
+  font-size: clamp(1.05rem, 5vw, 1.25rem) !important;
   display: inline-flex;
   align-items: center;
   gap: 15px;
@@ -118,16 +126,15 @@ a.hero_button {
 
 a.hero_button.default {
   background-color: var(--foreground);
-  font-size: clamp(1.15rem, 5vw, 1.5rem) !important;
 }
 
-.default span.button_arrow svg {
+/* .default span.button_arrow svg {
   width: 30px;
   height: auto;
   fill: var(--accent);
   transform: rotate(-60deg);
   transition: transform 0.4s ease-in-out, fill 0.4s ease-in-out;
-}
+} */
 
 
 a.hero_button:hover {
@@ -136,7 +143,7 @@ a.hero_button:hover {
 }
 
 span.button_arrow svg {
-  width: 40px;
+  width: 30px;
   height: auto;
   fill: var(--accent);
   transform: rotate(-60deg);
@@ -226,7 +233,7 @@ svg.theme_icon:hover {
     display: block;
     width: 1px;
     height: 0;
-    background: var(--secondary);
+        background: linear-gradient(to bottom, var(--foreground) 10%, var(--accent-two), var(--foreground)) 10%;    
     margin-bottom: 12px;
     animation: drawLine 1.2s ease-out forwards;
 }
@@ -260,6 +267,57 @@ Home Intro Styles
 .intro_text{
   margin-bottom: 60px;
 }
+
+
+.see_work_line {
+    display: block;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(to bottom, var(--background) 10%, var(--accent-two), var(--background)) 10%;    
+    margin-bottom: 12px;
+    animation: drawLine 1.2s ease-out forwards;
+}
+
+@keyframes drawLine {
+    from { height: 0; }
+    to   { height: 150px; }
+}
+
+/*********************
+Toools Section Styles 
+**********************/
+
+.tool_card{
+  background-color: var(--foreground);
+  padding: 30px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cards_grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+ul.skills_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+li.skill_item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+}
+
 
 
 
