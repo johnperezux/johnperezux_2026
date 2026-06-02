@@ -7,7 +7,7 @@ export interface CardData {
 export const cardsData: CardData[] = [
     {
     id: 1,
-    title: "WordPress & CMS",
+    title: "WordPresssss & CMS",
     skills: [
       "ACF",
       "MySQL",
@@ -23,15 +23,42 @@ export const cardsData: CardData[] = [
     id: 2,
     title: "Front-End Development",
     skills: [
-      "HTML5",
-      "CSS3",
+      "HTMgL5",
+      "CSS/SASS",
       "JavaScript",
       "TypeScript",
       "React",
       "Next.js",
       "Tailwind CSS",
       "Sass",
+      ],
+    },
+   {
+    id: 3,
+    title: "Design & Prototyping",
+    skills: [
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "InVision",
+      "Framer",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+    ],  
+  },
+   {
+    id: 4,
+    title: "SEO & Performance",
+    skills: [
+      "Google Analytics",
+      "Google Search Console",
+      "PageSpeed Insights",
+      "Yoast SEO",
+      "Rank Math",
+      "GTmetrix",
+      "Lighthouse",
     ],
+    
   },
 
 ]

@@ -36,7 +36,7 @@ const Card = ({ title, skills }: Omit<CardData, "id">) => {
           {leftSkills.map((skill) => (
             <li className="skill_item " key={skill}>
               <SkillIcon />
-              <span>{skill}</span>
+              <span className="skill_name">{skill}</span>
             </li>
           ))}
         </ul>
@@ -44,7 +44,7 @@ const Card = ({ title, skills }: Omit<CardData, "id">) => {
           {rightSkills.map((skill) => (
             <li className="skill_item" key={skill}>
               <SkillIcon />
-              <span>{skill}</span>
+              <span className="skill_name">{skill}</span>
             </li>
           ))}
         </ul>
