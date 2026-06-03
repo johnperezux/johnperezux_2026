@@ -1,26 +1,17 @@
 import { cardsData, CardData } from "./data/CardsData";
-
-const TitleIcon = () => (
-  <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.01514 15.975C2.01507 18.2593 2.65806 20.4974 3.87053 22.4334C5.08299 24.3693 6.81596 25.9249 8.87114 26.922L3.07114 11.022C2.37423 12.5802 2.01437 14.268 2.01514 15.975Z" fill="#ED3E33"/>
-<path d="M22.3901 13.5661C22.375 12.3766 22.0287 11.2148 21.3901 10.2111C20.7361 9.38859 20.3225 8.40116 20.1951 7.35811C20.1808 6.8012 20.3878 6.26133 20.7707 5.85668C21.1536 5.45204 21.6812 5.21559 22.2381 5.19911C22.2921 5.19911 22.3431 5.20611 22.3961 5.20911C21.0973 4.01964 19.5557 3.12644 17.8778 2.59125C16.1999 2.05607 14.4258 1.89168 12.6782 2.10945C10.9305 2.32721 9.25101 2.92194 7.75577 3.85251C6.26054 4.78308 4.98524 6.02729 4.01807 7.49911C4.30307 7.50811 4.57207 7.51411 4.80107 7.51411C6.07307 7.51411 8.04307 7.36011 8.04307 7.36011C8.17567 7.34977 8.30696 7.39253 8.40804 7.47898C8.50913 7.56543 8.57172 7.6885 8.58207 7.82111C8.59241 7.95372 8.54965 8.085 8.4632 8.18609C8.37674 8.28717 8.25368 8.34977 8.12107 8.36011C8.12107 8.36011 7.46207 8.43811 6.72907 8.47611L11.1591 21.6521L13.8211 13.6681L11.9211 8.47511C11.2661 8.43711 10.6451 8.35911 10.6451 8.35911C10.5125 8.3489 10.3893 8.28643 10.3028 8.18544C10.2162 8.08445 10.1734 7.95322 10.1836 7.82061C10.1938 7.688 10.2562 7.56488 10.3572 7.47833C10.4582 7.39179 10.5895 7.3489 10.7221 7.35911C10.7221 7.35911 12.7311 7.51311 13.9221 7.51311C15.1941 7.51311 17.1641 7.35911 17.1641 7.35911C17.2967 7.34877 17.428 7.39153 17.529 7.47798C17.6301 7.56443 17.6927 7.6875 17.7031 7.82011C17.7134 7.95272 17.6707 8.084 17.5842 8.18509C17.4977 8.28617 17.3747 8.34877 17.2421 8.35911C17.2421 8.35911 16.5821 8.43711 15.8501 8.47511L20.2501 21.5511L21.4631 17.4981C21.9515 16.2364 22.2635 14.9132 22.3901 13.5661Z" fill="#ED3E33"/>
-<path d="M15.316 17.0381L11.666 27.6431C14.1166 28.3647 16.7321 28.2968 19.142 27.4491C19.1081 27.3958 19.079 27.3396 19.055 27.2811L15.316 17.0381Z" fill="#ED3E33"/>
-<path d="M26.6481 10.1382C26.7035 10.5529 26.7309 10.9708 26.7301 11.3892C26.7093 12.888 26.3951 14.3682 25.8051 15.7462L22.0891 26.4922C24.8306 24.8981 26.8412 22.2966 27.6928 19.2419C28.5444 16.1871 28.1695 12.9206 26.6481 10.1382Z" fill="#ED3E33"/>
-<path d="M15.076 0C12.0941 0.000197778 9.17922 0.884616 6.69995 2.54142C4.22068 4.19822 2.28838 6.553 1.14739 9.30797C0.00639904 12.063 -0.292033 15.0944 0.289829 18.019C0.871691 20.9436 2.30772 23.6299 4.41631 25.7384C6.52491 27.8469 9.21137 29.2827 12.136 29.8644C15.0606 30.446 18.0921 30.1474 20.847 29.0062C23.6019 27.8651 25.9565 25.9326 27.6131 23.4532C29.2698 20.9739 30.154 18.0589 30.154 15.077C30.1495 11.0795 28.5595 7.24711 25.7327 4.42057C22.906 1.59403 19.0735 0.00423487 15.076 0ZM15.076 29.463C12.2307 29.463 9.44934 28.6193 7.08357 27.0385C4.71781 25.4578 2.87392 23.211 1.78508 20.5823C0.696234 17.9536 0.411343 15.061 0.96643 12.2704C1.52152 9.47982 2.89165 6.91648 4.90357 4.90456C6.91549 2.89264 9.47883 1.52251 12.2694 0.967423C15.06 0.412336 17.9526 0.697227 20.5813 1.78607C23.21 2.87491 25.4568 4.7188 27.0375 7.08457C28.6183 9.45033 29.462 12.2317 29.462 15.077C29.4583 18.8913 27.9414 22.5482 25.2444 25.2453C22.5473 27.9424 18.8903 29.4593 15.076 29.463Z" fill="#ED3E33"/>
-</svg>
-
-)
+import WordPressIcon from "../icons/wordpress/WordPressIcon"
+import ACFIcon from "../icons/wordpress/ACFIcon"
 
 
-const SkillIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <rect x="1" y="1" width="18" height="18" rx="3" stroke="#6B7BA4" strokeWidth="1.5" />
-    <path d="M7 7.5L4.5 10L7 12.5" stroke="#6B7BA4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M13 7.5L15.5 10L13 12.5" stroke="#6B7BA4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-)
+const titleIconMap: Record<string, React.ReactNode> ={
+  wordpress: <WordPressIcon />,
+}
 
-const Card = ({ title, skills }: Omit<CardData, "id">) => {
+const skillIconMap: Record<string, React.ReactNode> = {
+  acf: <ACFIcon />,
+}
+
+const Card = ({ title, titleIcon, skills }: Omit<CardData, "id">) => {
   const half = Math.ceil(skills.length / 2)
   const leftSkills = skills.slice(0, half)
   const rightSkills = skills.slice(half)
@@ -28,23 +19,23 @@ const Card = ({ title, skills }: Omit<CardData, "id">) => {
   return (
     <div className="tool_card">
       <div className="card_title flex items-center gap-[15px] mb=[30px] justify-center">
-        <TitleIcon />
+        {titleIconMap[titleIcon]}
         <h3>{title}</h3>
       </div>
       <div className="card_skills flex gap-[30px] justify-center w-100% gap-[60px]">
         <ul className="skills_list">
           {leftSkills.map((skill) => (
-            <li className="skill_item " key={skill}>
-              <SkillIcon />
-              <span className="skill_name">{skill}</span>
+            <li className="skill_item " key={skill.label}>
+              {skillIconMap[skill.icon]}
+              <span className="skill_name">{skill.label}</span>
             </li>
           ))}
         </ul>
         <ul className="skills_list">
           {rightSkills.map((skill) => (
-            <li className="skill_item" key={skill}>
-              <SkillIcon />
-              <span className="skill_name">{skill}</span>
+            <li className="skill_item" key={skill.label}>
+              {skillIconMap[skill.icon]}
+              <span className="skill_name">{skill.label}</span>
             </li>
           ))}
         </ul>
@@ -57,7 +48,7 @@ const Cards = () => {
   return (
     <div className="cards_grid">
       {cardsData.map((card) => (
-        <Card key={card.id} title={card.title} skills={card.skills} />
+        <Card key={card.id} title={card.title} titleIcon={card.titleIcon} skills={card.skills} />
       ))}
     </div>
   )

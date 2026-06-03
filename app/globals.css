@@ -298,14 +298,12 @@ Toools Section Styles
   transition: all 0.3s ease;
 }
 
-.tool_card:hover {
+/* .tool_card:hover {
   transform: translateY(-5px);
  background-color: var(--accent);
   box-shadow: 0 10px 20px rgba(237, 62, 51, 0.2); 
   color: var(--background);
-
-
-}
+} */
 
 .cards_grid {
   display: grid;
@@ -323,14 +321,21 @@ ul.skills_list {
 li.skill_item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     justify-content: flex-start;
+    width: 100%;
+}
+
+.skill_item svg{
+  width: 50px;
+  height: auto;
+  fill: var(--accent);
 }
 
 .skill_name {
     font-family: var(--font-dm-sans);
     color: var(--accent-two);
-    font-size: clamp(1rem, 5vw, 0.625rem);
+    font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
 

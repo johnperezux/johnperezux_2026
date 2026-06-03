@@ -1,64 +1,27 @@
 export interface CardData {
- id: number
+  id: number
   title: string
-  skills: string[]
+  titleIcon: string
+  skills: {
+    label: string
+    icon: string
+  }[]
 }
 
 export const cardsData: CardData[] = [
-    {
-    id: 1,
-    title: "WordPresssss & CMS",
-    skills: [
-      "ACF",
-      "MySQL",
-      "Headless CMS",
-      "Elementor",
-      "RESTFUL API",
-      "Divi",
-      "Webflow",
-      "GeneratePress",
-    ],
-  },
   {
-    id: 2,
-    title: "Front-End Development",
+    id: 1,
+    title: "WordPress & CMS",
+    titleIcon: "wordpress",
     skills: [
-      "HTMgL5",
-      "CSS/SASS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "Sass",
-      ],
-    },
-   {
-    id: 3,
-    title: "Design & Prototyping",
-    skills: [
-      "Figma",
-      "Adobe XD",
-      "Sketch",
-      "InVision",
-      "Framer",
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-    ],  
-  },
-   {
-    id: 4,
-    title: "SEO & Performance",
-    skills: [
-      "Google Analytics",
-      "Google Search Console",
-      "PageSpeed Insights",
-      "Yoast SEO",
-      "Rank Math",
-      "GTmetrix",
-      "Lighthouse",
+      { label: "ACF", icon: "acf" },
+      { label: "MySQL", icon: "mysql" },
+      { label: "Headless CMS", icon: "headlesscms" },
+      { label: "Elementor", icon: "elementor" },
+      { label: "RESTFUL API", icon: "restapi" },
+      { label: "Divi", icon: "divi" },
+      { label: "Webflow", icon: "webflow" },
+      { label: "GeneratePress", icon: "generatepress" },
     ],
-    
   },
-
 ]
