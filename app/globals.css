@@ -38,6 +38,11 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+::selection{
+  background-color:rgb(61, 212, 106) !important;
+  color:white;
+}
+
 
 
 h1{
@@ -255,6 +260,8 @@ svg.theme_icon:hover {
 }
 
 
+
+
 /*********************
 Home Intro Styles 
 **********************/
@@ -306,9 +313,10 @@ Toools Section Styles
 } */
 
 .cards_grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  display: flex;
+  justify-content: center;   
+  flex-wrap: wrap;
 }
 
 ul.skills_list {
@@ -327,15 +335,15 @@ li.skill_item {
 }
 
 .skill_item svg{
-  width: 50px;
-  height: auto;
+  width: 25px !important;
+  height: auto !important;
   fill: var(--accent);
 }
 
 .skill_name {
     font-family: var(--font-dm-sans);
     color: var(--accent-two);
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-size: clamp(1rem, 5vw, 1.2rem);
 }
 
 

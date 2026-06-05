@@ -7,7 +7,7 @@ export default function Hero() {
   <Header />
       <div className="mouse_scroll_box absolute top-[40%]">
         <span className="line" />
-        <ScrollMouse />
+        <ScrollMouse className="mouse_scroll_svg"/>
       </div>
 
   <div className="hero_container w-100% h-100% flex items-center justify-center">

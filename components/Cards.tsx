@@ -1,6 +1,14 @@
-import { cardsData, CardData } from "./data/CardsData";
+import { cardsData, CardData } from "./data/CardsData"
 import WordPressIcon from "../icons/wordpress/WordPressIcon"
 import ACFIcon from "../icons/wordpress/ACFIcon"
+import SQLIcon from "../icons/wordpress/SQLIcon"
+import ElementorIcon from "@/icons/wordpress/Elementor"
+import PHPIcon from "@/icons/wordpress/PHPIcon"
+import GPIcon from "@/icons/wordpress/GPIcon"
+import WebFlowIcon from "@/icons/wordpress/WebFlowIcon"
+import APIIcon from "@/icons/wordpress/APIIcon"
+import ShopifyIcon from "@/icons/wordpress/ShopifyIcon"
+
 
 
 const titleIconMap: Record<string, React.ReactNode> ={
@@ -9,6 +17,13 @@ const titleIconMap: Record<string, React.ReactNode> ={
 
 const skillIconMap: Record<string, React.ReactNode> = {
   acf: <ACFIcon />,
+  sql:<SQLIcon/>,
+  elementor:<ElementorIcon/>,
+  cms:<PHPIcon/>,
+  gp:<GPIcon/>,
+  shopify:<ShopifyIcon/>,
+  webflow:<WebFlowIcon/>,
+  restapi:<APIIcon/>,
 }
 
 const Card = ({ title, titleIcon, skills }: Omit<CardData, "id">) => {

@@ -1,4 +1,5 @@
 export const ScrollMouse = ({className}: {className?: string}) => (
+<a href="#about_me">
   <svg className={className} width="26" height="86" viewBox="0 0 26 86" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path className="arrow-3" d="M4.7749 79.249L12.7866 84.5068L21.2241 79.249" stroke="var(--secondary)" strokeWidth={2}/>
     <path className="arrow-2" d="M4.7749 69.0078L12.7866 74.2656L21.2241 69.0078" stroke="var(--secondary)" strokeWidth={2}/>
@@ -8,4 +9,6 @@ export const ScrollMouse = ({className}: {className?: string}) => (
     <path d="M13 5.5C8.86449 5.5 5.5 8.86449 5.5 13V31C5.5 35.1355 8.86449 38.5 13 38.5C17.1355 38.5 20.5 35.1355 20.5 31V13C20.5 8.86449 17.1355 5.5 13 5.5ZM13 2.5C18.799 2.5 23.5 7.20101 23.5 13V31C23.5 36.799 18.799 41.5 13 41.5C7.20101 41.5 2.5 36.799 2.5 31V13C2.5 7.20101 7.20101 2.5 13 2.5Z" fill="var(--foreground)"/>
     <path d="M14 9C14 8.44772 13.5523 8 13 8C12.4477 8 12 8.44772 12 9V12C12 12.5523 12.4477 13 13 13C13.5523 13 14 12.5523 14 12V9Z" fill="var(--foreground)"/>
   </svg>
+  </a>
+
 );
