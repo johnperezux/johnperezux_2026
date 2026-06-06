@@ -8,6 +8,7 @@ import GPIcon from "@/icons/wordpress/GPIcon"
 import WebFlowIcon from "@/icons/wordpress/WebFlowIcon"
 import APIIcon from "@/icons/wordpress/APIIcon"
 import ShopifyIcon from "@/icons/wordpress/ShopifyIcon"
+import ReactIcon from '@/icons/front-end/React'
 
 
 
@@ -24,6 +25,7 @@ const skillIconMap: Record<string, React.ReactNode> = {
   shopify:<ShopifyIcon/>,
   webflow:<WebFlowIcon/>,
   restapi:<APIIcon/>,
+  react:<ReactIcon/>,
 }
 
 const Card = ({ title, titleIcon, skills }: Omit<CardData, "id">) => {

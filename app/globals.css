@@ -302,15 +302,15 @@ Toools Section Styles
   display: flex;
   flex-direction: column;
   gap: 30px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  width: 40%;
 }
 
-/* .tool_card:hover {
+.tool_card:hover {
   transform: translateY(-5px);
- background-color: var(--accent);
+ border: 2px solid var(--accent);
   box-shadow: 0 10px 20px rgba(237, 62, 51, 0.2); 
-  color: var(--background);
-} */
+}
 
 .cards_grid {
   gap: 30px;
@@ -338,6 +338,7 @@ li.skill_item {
   width: 25px !important;
   height: auto !important;
   fill: var(--accent);
+  border-radius: 400px !important;
 }
 
 .skill_name {
@@ -356,6 +357,19 @@ Media Query Styles
 @media screen and (min-width: 768px) {
   .hamburger_menu_container {
     display: none;
+  }
+}
+
+@media screen and (max-width: 902px) {
+  .cards_grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tool_card{
+    width:100%;
+    transition: all 0.3s ease-in-out;
   }
 }
 

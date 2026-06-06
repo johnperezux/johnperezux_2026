@@ -29,7 +29,7 @@ export const cardsData: CardData[] = [
     title: "Front-End Dev",
     titleIcon: "wordpress",
     skills: [
-      { label: "React", icon: "acf" },
+      { label: "React", icon: "react" },
       { label: "Next.js", icon: "sql" },
       { label: "TailWind CSS", icon: "elementor" },
       { label: "CSS3/SCSS", icon: "cms" },
