@@ -8,7 +8,6 @@ import GPIcon from "@/icons/wordpress/GPIcon"
 import WebFlowIcon from "@/icons/wordpress/WebFlowIcon"
 import APIIcon from "@/icons/wordpress/APIIcon"
 import ShopifyIcon from "@/icons/wordpress/ShopifyIcon"
-import ReactIcon from '@/icons/front-end/React'
 import SemrushIcon from '@/icons/seo/SemrushIcon'
 import GaIcon from '@/icons/seo/GaIcon'
 import PageSpeedIcon from '@/icons/seo/PageSpeedIcon'
@@ -17,6 +16,22 @@ import MailChimpIcon from '@/icons/seo/MailChimpIcon'
 import KlaviyoIcon from '@/icons/seo/KlaviyoIcon'
 import AuditIcon from '@/icons/seo/AuditIcon'
 import SchemaIcon from '@/icons/seo/SchemaIcon'
+import AfterEffectsIcon from '@/icons/design/AfterEffectsIcon'
+import FigmaIcon from '@/icons/design/FigmaIcon'
+import IllustratorIcon from '@/icons/design/IllustratorIcon'
+import PhotoshopIcon from '@/icons/design/PhotoshopIcon'
+import IndesignIcon from '@/icons/design/IndesignIcon'
+import XdIcon from '@/icons/design/XdIcon'
+import WireframingIcon from '@/icons/design/WireframingIcon'
+import UxIcon from '@/icons/design/UxIcon'
+import ReactIcon from '@/icons/front-end/ReactIcon'
+import BootStrapIcon from '@/icons/front-end/BootStrapIcon'
+import GitHubIcon from '@/icons/front-end/GitHubIcon'
+import JavaScriptIcon from '@/icons/front-end/JavaScriptIcon'
+import TypeScriptIcon from '@/icons/front-end/TypeScriptIcon'
+import SassIcon from '@/icons/front-end/SassIcon'
+import TailwindIcon from '@/icons/front-end/TailwindIcon'
+import NextjsIcon from '@/icons/front-end/NextjsIcon'
 
 
 
@@ -42,6 +57,21 @@ const skillIconMap: Record<string, React.ReactNode> = {
   klaviyo:<KlaviyoIcon/>,
   audit:<AuditIcon/>,
   schema:<SchemaIcon/>,
+  aftereffect:<AfterEffectsIcon/>,
+  figma:<FigmaIcon/>,
+  illustrator:<IllustratorIcon/>,
+  photoshop:<PhotoshopIcon/>,
+  indesign:<IndesignIcon/>,
+  xd:<XdIcon/>,
+  wireframing:<WireframingIcon/>,
+  ux:<UxIcon/>,
+  bootstrap:<BootStrapIcon/>,
+  github:<GitHubIcon/>,
+  javascript:<JavaScriptIcon/>,
+  typescript:<TypeScriptIcon/>,
+  sass:<SassIcon/>,
+  tailwind:<TailwindIcon/>,
+  nextjs:<NextjsIcon/>,
 }
 
 const Card = ({ title, titleIcon, skills }: Omit<CardData, "id">) => {
@@ -55,7 +85,7 @@ const Card = ({ title, titleIcon, skills }: Omit<CardData, "id">) => {
         {titleIconMap[titleIcon]}
         <h3>{title}</h3>
       </div>
-      <div className="card_skills flex gap-[30px] justify-center w-100% gap-[60px]">
+      <div className="card_skills flex gap-[30px] justify-around w-100% gap-[30px]">
         <ul className="skills_list">
           {leftSkills.map((skill) => (
             <li className="skill_item " key={skill.label}>
