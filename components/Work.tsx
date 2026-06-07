@@ -1,55 +1,58 @@
+"use client";
+
+import { useRef } from "react";
 import { workData, WorkData } from "./data/WorkData"
-
-
 import SpicelopediaLogo from "../icons/work/SpicelopediaLogo"
+import EnterpriseLogo from "../icons/work/EnterpriseLogo"
+import KeyLimeLogo from "../icons/work/KeyLimeLogo"
 
 
 const workIconMap: Record<string, React.ReactNode> ={
   spicelopedia: <SpicelopediaLogo />,
+  enterprise: <EnterpriseLogo />,
+  keylime: <KeyLimeLogo />,
 
 }
 
 
 const Work = ({ workTitle, workIcon, workType }: Omit<WorkData, "id">) => {
 
+  const btnRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    if (btnRef.current) {
+      btnRef.current.style.left = `${x}px`;
+      btnRef.current.style.top = `${y}px`;
+    }
+  };
+  
+
   return (
-    <a href="#">
+    <a className="work_link relative" href="#" onMouseMove={handleMouseMove}>
         <div className="work_item">
-            <div className="work_inner_item flex place-content-between items-center">
-                <div className="work_title_icon flex gap-[30px] items-center">
+            <div className="work_inner_item flex flex-col md:flex-row place-content-between items-center gap-[0] flex-wrap">
+                <div className="work_title_icon flex flex-col md:flex-row gap-[30px] items-center flex-wrap">
                     {workIconMap[workIcon]}
                     <h3>{workTitle}</h3>
                 </div>
-                <div className="work_type">
+                <p className="work_type">
                     {workType}
-                </div>
+                </p>
             </div>
+            <div className="see_more_btn" ref={btnRef}>see more</div>
         </div>
     </a>
 
-
-    // <div className="tool_card">
-    //   <div className="card_title flex items-center gap-[15px] mb=[30px] justify-center">
-    //     {titleIconMap[titleIcon]}
-    //     <h3>{title}</h3>
-    //   </div>
-    //   <div className="card_skills flex gap-[30px] justify-around w-100% gap-[30px]">
-    //     <ul className="skills_list">
-    //       {leftSkills.map((skill) => (
-    //         <li className="skill_item " key={skill.label}>
-    //           {skillIconMap[skill.icon]}
-    //           <span className="skill_name">{skill.label}</span>
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   </div>
-    // </div>
   )
 }
 
 const Works = () => {
   return (
-    <div className="work_list flex flex-col m-[60px]">
+    <div className="work_list flex flex-col mt-[60px] mb-[60px]">
       {workData.map((work) => (
         <Work key={work.id} workTitle={work.workTitle} workIcon={work.workIcon} workType={work.workType} />
       ))}

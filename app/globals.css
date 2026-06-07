@@ -43,6 +43,10 @@ body {
   color:white;
 }
 
+section{
+  overflow: hidden;
+}
+
 
 
 h1{
@@ -267,8 +271,7 @@ Home Intro Styles
 **********************/
 
 
-.container_content{
-  margin:auto;  
+.margin_top_container{
   margin-top: 120px;
 }
 
@@ -292,7 +295,7 @@ Home Intro Styles
 }
 
 /*********************
-Toools Section Styles 
+Tools Section Styles 
 **********************/
 
 .tool_card{
@@ -304,7 +307,7 @@ Toools Section Styles
   flex-direction: column;
   gap: 30px;
   transition: all 0.3s ease-in-out;
-  width: 40%;
+  width: 100%;
 }
 
 /* .tool_card:hover {
@@ -315,9 +318,9 @@ Toools Section Styles
 
 .cards_grid {
   gap: 30px;
-  display: flex;
+  display: grid;
   justify-content: center;   
-  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 ul.skills_list {
@@ -352,10 +355,88 @@ Work Section Styles
 **********************/
 
 .work_item {
-    border-top: 2px solid;
+    border-top: 1px solid var(--accent-two);
     padding: 60px 0;
 }
 
+
+.work_title_icon h3{
+  color: var(--accent-two);
+}
+
+p.work_type{
+  text-transform: lowercase;
+  margin-bottom: 0 !important;
+}
+
+a.work_link h3,
+a.work_link p {
+transition: background-color .4s ease-in-out, color .4s ease-in-out;  
+}
+
+a.work_link:hover h3,
+a.work_link:hover p {
+  color: var(--secondary) !important;
+transition: background-color .4s ease-in-out, color .4s ease-in-out;
+}
+
+.work_title_icon svg {
+  color: var(--accent-two);
+  transition: color 0.3s ease-in-out;
+}
+
+a.work_link:hover .work_title_icon svg {
+  color: var(--accent);
+}
+
+.see_more_btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 2px solid var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.see_more_btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  transform: scale(1);
+  animation: none;
+}
+
+a.work_link:hover .see_more_btn {
+  opacity: 1;
+}
+
+a.work_link:hover .see_more_btn::after {
+  animation: wave 1.2s ease-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
 
 
 /*********************
@@ -389,6 +470,12 @@ Media Query Styles
 
   span.button_arrow svg {
     width: 24px;
+    height: auto;
+  }
+  
+
+  .work_title_icon svg, .work_title_icon{
+    width: 100%;
     height: auto;
   }
 }
