@@ -9,6 +9,9 @@ import WebFlowIcon from "@/icons/wordpress/WebFlowIcon"
 import APIIcon from "@/icons/wordpress/APIIcon"
 import ShopifyIcon from "@/icons/wordpress/ShopifyIcon"
 import ReactIcon from '@/icons/front-end/React'
+import SemrushIcon from '@/icons/seo/SemrushIcon'
+import GaIcon from '@/icons/seo/GaIcon'
+import PageSpeedIcon from '@/icons/seo/PageSpeedIcon'
 
 
 
@@ -26,6 +29,9 @@ const skillIconMap: Record<string, React.ReactNode> = {
   webflow:<WebFlowIcon/>,
   restapi:<APIIcon/>,
   react:<ReactIcon/>,
+  semrush:<SemrushIcon/>,
+  ga4:<GaIcon/>,
+  pagespeed:<PageSpeedIcon/>,
 }
 
 const Card = ({ title, titleIcon, skills }: Omit<CardData, "id">) => {

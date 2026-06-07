@@ -59,8 +59,8 @@ export const cardsData: CardData[] = [
     title: "SEO & Analytics",
     titleIcon: "seo",
     skills: [
-      { label: "Google Analytics", icon: "ga4" },
       { label: "SEMRush", icon: "semrush" },
+      { label: "Google Analytics", icon: "ga4" },
       { label: "PageSpeed", icon: "pagespeed" },
       { label: "Search Console", icon: "console" },
       { label: "MailChimp", icon: "mailchimp" },

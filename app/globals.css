@@ -338,7 +338,6 @@ li.skill_item {
   width: 25px !important;
   height: auto !important;
   fill: var(--accent);
-  border-radius: 400px !important;
 }
 
 .skill_name {
