@@ -20,12 +20,12 @@ export const cardsData: CardData[] = [
       { label: "PHP", icon: "cms" },
       { label: "RESTFUL API", icon: "restapi" },
       { label: "Shopify", icon: "shopify" },
-      { label: "SquareSpace", icon: "webflow" },
+      { label: "SquareSpace", icon: "squarespace" },
       { label: "GeneratePress", icon: "gp" },
     ],
   },  
   {
-    id: 1,
+    id: 2,
     title: "Front-End Dev",
     titleIcon: "frontend",
     skills: [
@@ -40,8 +40,8 @@ export const cardsData: CardData[] = [
     ],
   },
   {
-    id: 1,
-    title: "Design & Prototyping",
+    id: 3,
+    title: "Design & Prototype",
     titleIcon: "design",
     skills: [
       { label: "WireFraming", icon: "wireframing" },
@@ -55,7 +55,7 @@ export const cardsData: CardData[] = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     title: "SEO & Analytics",
     titleIcon: "seo",
     skills: [

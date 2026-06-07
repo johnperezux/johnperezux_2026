@@ -266,7 +266,8 @@ svg.theme_icon:hover {
 Home Intro Styles 
 **********************/
 
-.intro_content{
+
+.container_content{
   margin:auto;  
   margin-top: 120px;
 }
@@ -346,6 +347,14 @@ li.skill_item {
     font-size: 1rem;
 }
 
+/*********************
+Work Section Styles 
+**********************/
+
+.work_item {
+    border-top: 2px solid;
+    padding: 60px 0;
+}
 
 
 

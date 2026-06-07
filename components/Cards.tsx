@@ -1,13 +1,22 @@
 import { cardsData, CardData } from "./data/CardsData"
+
+//Title Icons//
 import WordPressIcon from "../icons/wordpress/WordPressIcon"
+import DesignIcon from "../icons/design/DesignIcon"
+import FrontEndIcon from "../icons/front-end/FrontEndIcon"
+import SEOIcon from "../icons/seo/SEOIcon"
+
+// WordPress//
 import ACFIcon from "../icons/wordpress/ACFIcon"
 import SQLIcon from "../icons/wordpress/SQLIcon"
 import ElementorIcon from "@/icons/wordpress/Elementor"
 import PHPIcon from "@/icons/wordpress/PHPIcon"
 import GPIcon from "@/icons/wordpress/GPIcon"
-import WebFlowIcon from "@/icons/wordpress/WebFlowIcon"
+import SquareSpaceIcon from "@/icons/wordpress/SquareSpaceIcon"
 import APIIcon from "@/icons/wordpress/APIIcon"
 import ShopifyIcon from "@/icons/wordpress/ShopifyIcon"
+
+//SEO//
 import SemrushIcon from '@/icons/seo/SemrushIcon'
 import GaIcon from '@/icons/seo/GaIcon'
 import PageSpeedIcon from '@/icons/seo/PageSpeedIcon'
@@ -16,6 +25,8 @@ import MailChimpIcon from '@/icons/seo/MailChimpIcon'
 import KlaviyoIcon from '@/icons/seo/KlaviyoIcon'
 import AuditIcon from '@/icons/seo/AuditIcon'
 import SchemaIcon from '@/icons/seo/SchemaIcon'
+
+//Design//
 import AfterEffectsIcon from '@/icons/design/AfterEffectsIcon'
 import FigmaIcon from '@/icons/design/FigmaIcon'
 import IllustratorIcon from '@/icons/design/IllustratorIcon'
@@ -24,6 +35,8 @@ import IndesignIcon from '@/icons/design/IndesignIcon'
 import XdIcon from '@/icons/design/XdIcon'
 import WireframingIcon from '@/icons/design/WireframingIcon'
 import UxIcon from '@/icons/design/UxIcon'
+
+//Front End//
 import ReactIcon from '@/icons/front-end/ReactIcon'
 import BootStrapIcon from '@/icons/front-end/BootStrapIcon'
 import GitHubIcon from '@/icons/front-end/GitHubIcon'
@@ -37,6 +50,9 @@ import NextjsIcon from '@/icons/front-end/NextjsIcon'
 
 const titleIconMap: Record<string, React.ReactNode> ={
   wordpress: <WordPressIcon />,
+  design: <DesignIcon />,
+  frontend: <FrontEndIcon />,
+  seo: <SEOIcon />,
 }
 
 const skillIconMap: Record<string, React.ReactNode> = {
@@ -46,7 +62,7 @@ const skillIconMap: Record<string, React.ReactNode> = {
   cms:<PHPIcon/>,
   gp:<GPIcon/>,
   shopify:<ShopifyIcon/>,
-  webflow:<WebFlowIcon/>,
+  squarespace:<SquareSpaceIcon/>,
   restapi:<APIIcon/>,
   react:<ReactIcon/>,
   semrush:<SemrushIcon/>,
