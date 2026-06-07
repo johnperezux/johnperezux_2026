@@ -12,6 +12,11 @@ import ReactIcon from '@/icons/front-end/React'
 import SemrushIcon from '@/icons/seo/SemrushIcon'
 import GaIcon from '@/icons/seo/GaIcon'
 import PageSpeedIcon from '@/icons/seo/PageSpeedIcon'
+import ConsoleIcon from '@/icons/seo/ConsoleIcon'
+import MailChimpIcon from '@/icons/seo/MailChimpIcon'
+import KlaviyoIcon from '@/icons/seo/KlaviyoIcon'
+import AuditIcon from '@/icons/seo/AuditIcon'
+import SchemaIcon from '@/icons/seo/SchemaIcon'
 
 
 
@@ -32,6 +37,11 @@ const skillIconMap: Record<string, React.ReactNode> = {
   semrush:<SemrushIcon/>,
   ga4:<GaIcon/>,
   pagespeed:<PageSpeedIcon/>,
+  console:<ConsoleIcon/>,
+  mailchimp:<MailChimpIcon/>,
+  klaviyo:<KlaviyoIcon/>,
+  audit:<AuditIcon/>,
+  schema:<SchemaIcon/>,
 }
 
 const Card = ({ title, titleIcon, skills }: Omit<CardData, "id">) => {

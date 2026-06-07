@@ -65,7 +65,7 @@ export const cardsData: CardData[] = [
       { label: "Search Console", icon: "console" },
       { label: "MailChimp", icon: "mailchimp" },
       { label: "Klaviyo", icon: "klaviyo" },
-      { label: "Site Audits", icon: "technical" },
+      { label: "Site Audits", icon: "audit" },
       { label: "Schema Markup", icon: "schema" },
     ],
   },
