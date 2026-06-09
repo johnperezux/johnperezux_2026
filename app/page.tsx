@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import Cards from "@/components/Cards";
 import Work from "@/components/Work";
 import TextBlock from "@/components/TextBlock";
+import ConnectFooter from "@/icons/ConnectFooter";
 
 export default function Home() {
   return (
@@ -71,6 +72,7 @@ export default function Home() {
           paragraph="Looking for a developer who can bridge the gap between stunning design and clean code? I’m currently available for freelance contracts and full-time opportunities. Let’s connect to discuss how I can help bring your next digital product to life."
           
           />
+          <ConnectFooter/>
         </div>
 
       </section>
