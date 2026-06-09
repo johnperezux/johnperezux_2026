@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Outfit, DM_Sans } from "next/font/google";
 import { ThemeProvider } from 'next-themes';
+import Footer from "@/components/Footer";
+
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -29,6 +31,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange={false}>
           {children}
         </ThemeProvider>
+        <Footer/>
       </body>
     </html>
   );

@@ -72,7 +72,10 @@ export default function Home() {
           paragraph="Looking for a developer who can bridge the gap between stunning design and clean code? I’m currently available for freelance contracts and full-time opportunities. Let’s connect to discuss how I can help bring your next digital product to life."
           
           />
+          <div className="after_content_svg">
           <ConnectFooter/>
+
+          </div>
         </div>
 
       </section>

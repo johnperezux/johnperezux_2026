@@ -25,6 +25,8 @@ Root Styles
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-two: var(--accent-two);
   --font-outfit: var(--font-outfit);
   --font-dm-sans: var(--font-dm-sans);
 }
@@ -40,7 +42,7 @@ body {
 
 ::selection{
   background-color:rgb(61, 212, 106) !important;
-  color:white;
+  color: #050817;
 }
 
 section{
@@ -436,6 +438,14 @@ a.work_link:hover .see_more_btn::after {
     transform: scale(1.6);
     opacity: 0;
   }
+}
+
+/*********************
+Footer Styles 
+**********************/
+.after_content_svg svg{
+  width: 100%;
+  height: auto;
 }
 
 
