@@ -35,8 +35,8 @@ export default function Home() {
           <div className="container_content work_content">
              <div className="container_content intro_content">
                <TextBlock
-                heading="Check Out My Work"
-                spanText="Work"
+                heading="Explore My Portfolio"
+                spanText="Portfolio"
                 spanColor="var(--accent)"
                 paragraph="I Graduated From The University Of Central Florida With A Bachelor's Degree In Web & Social Platforms. Throughout My Journey In School, I Learned How To Develop Websites Using Coding Languages And Various Frameworks."
               />
@@ -46,6 +46,31 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+      </section>
+      {/*/Testimonial Section */}
+      <section className="testimonial_section" id="testimonial">
+        <div className="testimonial_container container margin_top_container">
+          <TextBlock
+          heading="Client Stories"
+          spanText="Stories"
+          spanColor="var(--accent)"
+          />
+        </div>
+
+      </section>
+
+      {/*/Let's Connect Section */}
+      <section className="connect_section" id="connect">
+        <div className="connect_container container margin_top_container">
+          <TextBlock
+          heading="Let's Connect on LinkedIn"
+          spanText="LinkedIn"
+          spanColor="var(--accent)"
+          paragraph="Looking for a developer who can bridge the gap between stunning design and clean code? I’m currently available for freelance contracts and full-time opportunities. Let’s connect to discuss how I can help bring your next digital product to life."
+          
+          />
         </div>
 
       </section>
