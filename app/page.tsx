@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Button from "@/components/Button";
 import Cards from "@/components/Cards";
 import Work from "@/components/Work";
+import Testimonial from "@/components/Testimonial";
 import TextBlock from "@/components/TextBlock";
 import ConnectFooter from "@/icons/ConnectFooter";
 
@@ -59,6 +60,7 @@ export default function Home() {
           spanColor="var(--accent)"
           />
         </div>
+          <Testimonial/><h1>ss</h1>
 
       </section>
 
