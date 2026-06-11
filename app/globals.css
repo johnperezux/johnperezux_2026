@@ -6,20 +6,20 @@ Root Styles
 :root {
   --background: #050817;
   --foreground: #0c1333;
-  --secondary: #FAFAFA;
-  --accent: #ED3E33;
-  --accent-two: #97A7BF;
+  --secondary: #fafafa;
+  --accent: #ed3e33;
+  --accent-two: #97a7bf;
   --font-outfit: var(--font-outfit);
   --font-dm-sans: var(--font-dm-sans);
   --font-size-p-large: clamp(1.15rem, 5vw, 1.875rem);
 }
 
 :root.light {
-  --background: #FAFAFA;
+  --background: #fafafa;
   --foreground: #ebebeb;
   --secondary: #050817;
-  --accent: #006AF5;
-  --accent-two: #2E3A4D;
+  --accent: #006af5;
+  --accent-two: #2e3a4d;
 }
 
 @theme inline {
@@ -37,29 +37,29 @@ HTML Styles
 body {
   background-color: var(--background);
   color: var(--secondary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-::selection{
-  background-color:rgb(61, 212, 106) !important;
+::selection {
+  background-color: rgb(61, 212, 106) !important;
   color: #050817;
 }
 
-section{
+section {
   overflow: hidden;
 }
 
-
-
-h1{
+h1 {
   font-family: var(--font-outfit);
   font-size: clamp(3.125rem, 5vw, 6.25rem) !important;
   font-weight: 700;
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
   line-height: 1.1;
 }
 
-h2{
+h2 {
   font-family: var(--font-outfit);
   font-size: clamp(2.25rem, 5vw, 3.75rem) !important;
   font-weight: 700;
@@ -67,13 +67,19 @@ h2{
   text-transform: capitalize;
 }
 
-h3{
+h3 {
   font-family: var(--font-outfit);
   font-size: clamp(1.25rem, 5vw, 2rem) !important;
   font-weight: 700;
 }
 
-p{
+h4 {
+  font-family: var(--font-outfit);
+  font-size: clamp(1rem, 5vw, 1.375rem) !important;
+  font-weight: 700;
+}
+
+p {
   font-family: var(--font-dm-sans);
   color: var(--accent-two);
   font-size: 1rem;
@@ -86,26 +92,23 @@ p{
   max-width: 1100px;
   margin: auto;
   padding-left: 20px;
-  padding-right:20px;
+  padding-right: 20px;
 }
-
-
 
 /*********************
 Hero Styles 
 **********************/
-.hero_container{
+.hero_container {
   height: 100%;
 }
 
-
-span.hero{ 
-font-family: var(--font-dm-sans);
-text-transform: uppercase;
-color: var(--accent);
-letter-spacing: 21%;
-font-size: clamp(0.875rem, 5vw, 1.25rem);
-font-weight: 700;
+span.hero {
+  font-family: var(--font-dm-sans);
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 21%;
+  font-size: clamp(0.875rem, 5vw, 1.25rem);
+  font-weight: 700;
 }
 
 p.hero {
@@ -113,8 +116,7 @@ p.hero {
   color: var(--accent-two);
   font-size: clamp(1.15rem, 2vw, 1.875rem);
   margin-bottom: 60px;
-    line-height: 1.5;
-
+  line-height: 1.5;
 }
 
 /*********************
@@ -125,14 +127,16 @@ a.hero_button {
   font-family: var(--font-outfit);
   background-color: var(--background);
   color: var(--secondary);
-  padding: 14px 20px; 
+  padding: 14px 20px;
   border-radius: 100px;
   text-transform: capitalize;
   font-size: clamp(1.05rem, 5vw, 1.25rem) !important;
   display: inline-flex;
   align-items: center;
   gap: 15px;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
 }
 
 a.hero_button.default {
@@ -147,7 +151,6 @@ a.hero_button.default {
   transition: transform 0.4s ease-in-out, fill 0.4s ease-in-out;
 } */
 
-
 a.hero_button:hover {
   background-color: var(--accent);
   color: var(--background);
@@ -158,7 +161,9 @@ span.button_arrow svg {
   height: auto;
   fill: var(--accent);
   transform: rotate(-60deg);
-  transition: transform 0.4s ease-in-out, fill 0.4s ease-in-out;
+  transition:
+    transform 0.4s ease-in-out,
+    fill 0.4s ease-in-out;
 }
 
 a.hero_button:hover span.button_arrow svg {
@@ -166,19 +171,17 @@ a.hero_button:hover span.button_arrow svg {
   fill: var(--background);
 }
 
-
-
 /*********************
 Header Styles 
 **********************/
 
-.header_links_container a, 
-.header_links_container span { 
+.header_links_container a,
+.header_links_container span {
   display: inline-block;
-} 
+}
 
-
-a.hero_link, span.hero_link{
+a.hero_link,
+span.hero_link {
   font-family: var(--font-dm-sans);
   color: var(--accent-two);
   text-transform: capitalize;
@@ -188,10 +191,10 @@ a.hero_link, span.hero_link{
   align-items: center;
 }
 
-
-a.hero_link:hover, a.hero_link:focus {
+a.hero_link:hover,
+a.hero_link:focus {
   color: var(--accent);
-    transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 span.bright_dot.hero_link::before {
@@ -199,7 +202,7 @@ span.bright_dot.hero_link::before {
   display: inline-flex;
   width: 10px;
   height: 10px;
-  background-color: #32B246;
+  background-color: #32b246;
   border-radius: 100%;
   margin-right: 15px;
   align-items: center;
@@ -208,11 +211,17 @@ span.bright_dot.hero_link::before {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 10px #57ca68, 0 0 20px #57ca68;
+  0%,
+  100% {
+    box-shadow:
+      0 0 10px #57ca68,
+      0 0 20px #57ca68;
   }
   50% {
-    box-shadow: 0 0 12px #57ca68, 0 0 24px #57ca68, 0 0 32px #57ca68;
+    box-shadow:
+      0 0 12px #57ca68,
+      0 0 24px #57ca68,
+      0 0 32px #57ca68;
   }
 }
 
@@ -227,84 +236,121 @@ svg.theme_icon:hover {
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 
 /* Scroll Mouse Styles */
 
 .mouse_scroll_box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .line {
-    display: block;
-    width: 1px;
-    height: 0;
-        background: linear-gradient(to bottom, var(--foreground) 10%, var(--accent-two), var(--foreground)) 10%;    
-    margin-bottom: 12px;
-    animation: drawLine 1.2s ease-out forwards;
+  display: block;
+  width: 1px;
+  height: 0;
+  background: linear-gradient(
+      to bottom,
+      var(--foreground) 10%,
+      var(--accent-two),
+      var(--foreground)
+    )
+    10%;
+  margin-bottom: 12px;
+  animation: drawLine 1.2s ease-out forwards;
 }
 
 @keyframes drawLine {
-    from { height: 0; }
-    to   { height: 150px; }
+  from {
+    height: 0;
+  }
+  to {
+    height: 150px;
+  }
 }
 
-.arrow-1 { opacity: 0.15; animation: arrowPulse 1.8s ease-in-out 0s infinite; }
-.arrow-2 { opacity: 0.15; animation: arrowPulse 1.8s ease-in-out 0.3s infinite; }
-.arrow-3 { opacity: 0.15; animation: arrowPulse 1.8s ease-in-out 0.6s infinite; }
+.arrow-1 {
+  opacity: 0.15;
+  animation: arrowPulse 1.8s ease-in-out 0s infinite;
+}
+.arrow-2 {
+  opacity: 0.15;
+  animation: arrowPulse 1.8s ease-in-out 0.3s infinite;
+}
+.arrow-3 {
+  opacity: 0.15;
+  animation: arrowPulse 1.8s ease-in-out 0.6s infinite;
+}
 
 @keyframes arrowPulse {
-    0%   { opacity: 0.15; }
-    33%  { opacity: 1; }
-    66%  { opacity: 0.15; }
-    100% { opacity: 0.15; }
+  0% {
+    opacity: 0.15;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0.15;
+  }
 }
-
-
-
 
 /*********************
 Home Intro Styles 
 **********************/
 
-
-.margin_top_container{
+.margin_top_container {
   margin-top: 120px;
 }
 
-.intro_text{
+.intro_text {
   margin-bottom: 60px;
 }
 
-
 .see_work_line {
-    display: block;
-    width: 1px;
-    height: 0;
-    background: linear-gradient(to bottom, var(--background) 10%, var(--accent-two), var(--background)) 10%;    
-    margin-bottom: 12px;
-    animation: drawLine 1.2s ease-out forwards;
+  display: block;
+  width: 1px;
+  height: 0;
+  background: linear-gradient(
+      to bottom,
+      var(--background) 10%,
+      var(--accent-two),
+      var(--background)
+    )
+    10%;
+  margin-bottom: 12px;
+  animation: drawLine 1.2s ease-out forwards;
 }
 
 @keyframes drawLine {
-    from { height: 0; }
-    to   { height: 150px; }
+  from {
+    height: 0;
+  }
+  to {
+    height: 150px;
+  }
 }
 
 /*********************
 Tools Section Styles 
 **********************/
 
-.tool_card{
+.tool_card {
   background-color: var(--foreground);
   padding: 30px;
   border-radius: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -321,35 +367,35 @@ Tools Section Styles
 .cards_grid {
   gap: 30px;
   display: grid;
-  justify-content: center;   
+  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
 }
 
 ul.skills_list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
 }
 
 li.skill_item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    justify-content: flex-start;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-.skill_item svg{
+.skill_item svg {
   width: 25px !important;
   height: auto !important;
   fill: var(--accent);
 }
 
 .skill_name {
-    font-family: var(--font-dm-sans);
-    color: var(--accent-two);
-    font-size: 1rem;
+  font-family: var(--font-dm-sans);
+  color: var(--accent-two);
+  font-size: 1rem;
 }
 
 /*********************
@@ -357,29 +403,32 @@ Work Section Styles
 **********************/
 
 .work_item {
-    border-top: 1px solid var(--accent-two);
-    padding: 60px 0;
+  border-top: 1px solid var(--accent-two);
+  padding: 60px 0;
 }
 
-
-.work_title_icon h3{
+.work_title_icon h3 {
   color: var(--accent-two);
 }
 
-p.work_type{
+p.work_type {
   text-transform: lowercase;
   margin-bottom: 0 !important;
 }
 
 a.work_link h3,
 a.work_link p {
-transition: background-color .4s ease-in-out, color .4s ease-in-out;  
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
 }
 
 a.work_link:hover h3,
 a.work_link:hover p {
   color: var(--secondary) !important;
-transition: background-color .4s ease-in-out, color .4s ease-in-out;
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
 }
 
 .work_title_icon svg {
@@ -410,7 +459,7 @@ a.work_link:hover .work_title_icon svg {
 }
 
 .see_more_btn::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
@@ -441,13 +490,38 @@ a.work_link:hover .see_more_btn::after {
 }
 
 /*********************
+Testimonial Section Styles 
+**********************/
+
+.review_marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.review_marquee:has(.review_card:hover) {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* .review_card:hover {
+  border: 2px solid var(--accent);
+  transition
+} */
+
+/*********************
 Footer Styles 
 **********************/
-.after_content_svg svg{
+.after_content_svg svg {
   width: 100%;
   height: auto;
 }
-
 
 /*********************
 Media Query Styles 
@@ -460,21 +534,21 @@ Media Query Styles
 }
 
 @media screen and (max-width: 902px) {
-  .cards_grid{
+  .cards_grid {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .tool_card{
-    width:100%;
+  .tool_card {
+    width: 100%;
     transition: all 0.3s ease-in-out;
   }
 }
 
-
 @media screen and (max-width: 768px) {
-  .header_links_container, .mouse_scroll_box {
+  .header_links_container,
+  .mouse_scroll_box {
     display: none;
   }
 
@@ -482,9 +556,9 @@ Media Query Styles
     width: 24px;
     height: auto;
   }
-  
 
-  .work_title_icon svg, .work_title_icon{
+  .work_title_icon svg,
+  .work_title_icon {
     width: 100%;
     height: auto;
   }

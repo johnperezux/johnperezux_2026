@@ -3,7 +3,6 @@ export interface TestimonialData {
   name: string;
   titles: string;
   testimony: string;
-  social: string;
 }
 
 export const testimonialsData: TestimonialData[] = [
@@ -13,6 +12,19 @@ export const testimonialsData: TestimonialData[] = [
     titles: 'Owner of Culinary Systems',
     testimony:
       'Creative hard worker, handled my ecom work, website and shopify store and email campaigns. I provided direction and Johnathan made it happen!!!',
-    social: 'linkedin',
+  },
+  {
+    id: 1,
+    name: 'Roberto Moya',
+    titles: 'Owner of Culinary Systems',
+    testimony:
+      'Creative hard worker, handled my ecom work, website and shopify store and email campaigns. I provided direction and Johnathan made it happen!!!',
+  },
+  {
+    id: 1,
+    name: 'Kevin LaLiberty',
+    titles: 'Owner of Culinary Systems',
+    testimony:
+      'Creative hard worker, handled my ecom work, website and shopify store and email campaigns. I provided direction and Johnathan made it happen!!!',
   },
 ];
