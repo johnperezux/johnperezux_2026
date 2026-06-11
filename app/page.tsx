@@ -60,7 +60,7 @@ export default function Home() {
           spanColor="var(--accent)"
           />
         </div>
-          <Testimonial/><h1>ss</h1>
+          <Testimonial/>
 
       </section>
 
