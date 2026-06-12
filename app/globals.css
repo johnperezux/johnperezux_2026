@@ -494,13 +494,12 @@ Testimonial Section Styles
 **********************/
 
 .review_marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
-.review_marquee:has(.review_card:hover) {
-  animation-play-state: paused;
+.review_marquee_reverse {
+  animation: marquee 60s linear infinite reverse;
 }
-
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -510,10 +509,9 @@ Testimonial Section Styles
   }
 }
 
-/* .review_card:hover {
-  border: 2px solid var(--accent);
-  transition
-} */
+.quote_icon_container svg {
+  fill: var(--accent);
+}
 
 /*********************
 Footer Styles 
