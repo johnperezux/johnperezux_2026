@@ -4,14 +4,31 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { LightTheme } from './dark_light_mode';
 import { DarkTheme } from './dark_light_mode';
-import {Logo} from "@/components/Logo";
-
+import { Logo } from '@/components/Logo';
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
+
+  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const enteredFromRight = e.clientX > rect.left + rect.width / 2;
+    e.currentTarget.style.setProperty(
+      '--origin',
+      enteredFromRight ? 'right' : 'left',
+    );
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const exitedFromRight = e.clientX > rect.left + rect.width / 2;
+    e.currentTarget.style.setProperty(
+      '--origin',
+      exitedFromRight ? 'right' : 'left',
+    );
+  };
 
   return (
     <header>
@@ -27,14 +44,32 @@ export default function Header() {
             {/* <a className="hero_link" href="https://www.linkedin.com/in/johnperezux/" target="_blank" rel="noopener noreferrer">
               <span className="bright_dot hero_link flex items-center">Available for Hire</span>
             </a> */}
-            <a className="hero_link" href="#work"><span>See My Work</span></a>
-            <a className="hero_link" href="#resume"><span>Resume</span></a>
+            <a
+              className="hero_link"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              href="#work"
+            >
+              <span>See My Work</span>
+            </a>
+            <a
+              className="hero_link"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              href="#resume"
+            >
+              <span>Resume</span>
+            </a>
 
             <div className="theme_toggle_container">
               {mounted && (
                 <button
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                  }}
                   aria-label="Toggle theme"
                 >
                   {theme === 'dark' ? (

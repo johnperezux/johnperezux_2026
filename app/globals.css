@@ -12,6 +12,8 @@ Root Styles
   --font-outfit: var(--font-outfit);
   --font-dm-sans: var(--font-dm-sans);
   --font-size-p-large: clamp(1.15rem, 5vw, 1.875rem);
+  --selection: rgb(212, 61, 162);
+  --selection-color: rgb(0, 0, 0);
 }
 
 :root.light {
@@ -20,6 +22,8 @@ Root Styles
   --secondary: #050817;
   --accent: #006af5;
   --accent-two: #2e3a4d;
+  --selection: rgb(61, 212, 106);
+  --selection-color: rgb(0, 0, 0);
 }
 
 @theme inline {
@@ -43,7 +47,7 @@ body {
 }
 
 ::selection {
-  background-color: rgb(61, 212, 106) !important;
+  background-color: var(--selection);
   color: #050817;
 }
 
@@ -136,9 +140,9 @@ a.hero_button {
   gap: 15px;
   box-shadow: 0px 0px 0px 0px var(--accent);
   transition:
-    background-color 0.4s ease-in-out,
-    color 0.4s ease-in-out,
-    box-shadow 0.4s ease-in-out;
+    background-color 0.5s ease-in-out,
+    color 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out;
 }
 
 a.hero_button.default {
@@ -157,8 +161,8 @@ span.button_arrow svg {
   fill: var(--accent);
   transform: rotate(-60deg);
   transition:
-    transform 0.4s ease-in-out,
-    fill 0.4s ease-in-out;
+    transform 0.5s ease-in-out,
+    fill 0.5s ease-in-out;
 }
 
 a.hero_button:hover span.button_arrow svg {
@@ -169,6 +173,18 @@ a.hero_button:hover span.button_arrow svg {
 /*********************
 Header Styles 
 **********************/
+
+svg.header_logo {
+  fill: var(--accent);
+  position: relative;
+  transition:
+    fill 0.5s ease-in-out,
+    filter 0.5s ease-in-out;
+}
+
+svg.header_logo:hover {
+  filter: drop-shadow(0px 0px 5px var(--accent));
+}
 
 .header_links_container a,
 .header_links_container span {
@@ -181,15 +197,41 @@ span.hero_link {
   color: var(--accent-two);
   text-transform: capitalize;
   font-size: 1rem;
-  transition: color 0.4s ease-in-out;
+  transition: color 0.5s ease-in-out;
   display: flex;
   align-items: center;
+  position: relative;
+  height: 2.75em;
+  z-index: 1;
 }
 
 a.hero_link:hover,
 a.hero_link:focus {
   color: var(--accent);
-  transition: color 0.4s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+a.hero_link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: var(--origin, left);
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+  box-shadow: 0px 0px 10px 2px var(--accent);
+}
+
+a.hero_link:hover::after {
+  transform: scaleX(1);
+}
+
+a.hero_link:not(:hover)::after {
+  transform-origin: var(--origin, right);
 }
 
 span.bright_dot.hero_link::before {
@@ -414,16 +456,16 @@ p.work_type {
 a.work_link h3,
 a.work_link p {
   transition:
-    background-color 0.4s ease-in-out,
-    color 0.4s ease-in-out;
+    background-color 0.5s ease-in-out,
+    color 0.5s ease-in-out;
 }
 
 a.work_link:hover h3,
 a.work_link:hover p {
   color: var(--secondary) !important;
   transition:
-    background-color 0.4s ease-in-out,
-    color 0.4s ease-in-out;
+    background-color 0.5s ease-in-out,
+    color 0.5s ease-in-out;
 }
 
 .work_title_icon svg {
