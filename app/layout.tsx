@@ -31,10 +31,7 @@ export default function RootLayout({
       className={`${outfit.variable} ${dmSans.variable}`}
       suppressHydrationWarning
     >
-      <body suppressHydrationWarning>
-        <div className="h-[100vh] bg-[var(--accent)]">
-          <h1>dd</h1>
-        </div>
+      <body className="relative" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

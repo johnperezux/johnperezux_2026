@@ -171,6 +171,22 @@ a.hero_button:hover span.button_arrow svg {
 }
 
 /*********************
+Intro Styles 
+**********************/
+.preloader {
+  position: absolute;
+  height: 100vh;
+  background-color: var(--accent);
+  z-index: 14;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  top: 0;
+  margin-top: -20px;
+}
+
+/*********************
 Header Styles 
 **********************/
 

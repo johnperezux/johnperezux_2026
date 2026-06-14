@@ -4,11 +4,14 @@ import Cards from '@/components/Cards';
 import Work from '@/components/Work';
 import Testimonial from '@/components/Testimonial';
 import TextBlock from '@/components/TextBlock';
+import Preloader from '@/components/Preloader';
 import ConnectFooter from '@/icons/ConnectFooter';
 
 export default function Home() {
   return (
     <main className="main_content">
+      <Preloader />
+
       <Hero />
       {/* Intro Section */}
       <section className="intro_section">
@@ -74,7 +77,6 @@ export default function Home() {
         </div>
         <Testimonial />
       </section>
-
       {/*/Let's Connect Section */}
       <section className="connect_section" id="connect">
         <div className="connect_container container margin_top_container">
