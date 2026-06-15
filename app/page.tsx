@@ -10,7 +10,7 @@ import ConnectFooter from '@/icons/ConnectFooter';
 export default function Home() {
   return (
     <main className="main_content">
-      <Preloader />
+      {/* <Preloader /> */}
 
       <Hero />
       {/* Intro Section */}

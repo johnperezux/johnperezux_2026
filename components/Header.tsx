@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { LightTheme } from './dark_light_mode';
 import { DarkTheme } from './dark_light_mode';
 import { Logo } from '@/components/Logo';
+import MobileMenu from '@/components/MobileMenu';
+import { NAV_LINKS } from '@/components/data/HeaderData';
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -41,25 +43,17 @@ export default function Header() {
           </div>
 
           <div className="header_links_container flex flex-row gap-[60px]">
-            {/* <a className="hero_link" href="https://www.linkedin.com/in/johnperezux/" target="_blank" rel="noopener noreferrer">
-              <span className="bright_dot hero_link flex items-center">Available for Hire</span>
-            </a> */}
-            <a
-              className="hero_link"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              href="#work"
-            >
-              <span>See My Work</span>
-            </a>
-            <a
-              className="hero_link"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              href="#resume"
-            >
-              <span>Resume</span>
-            </a>
+            {NAV_LINKS.map(({ label, href }) => (
+              <a
+                key={href}
+                className="hero_link"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                href={href}
+              >
+                <span>{label}</span>
+              </a>
+            ))}
 
             <div className="theme_toggle_container">
               {mounted && (
@@ -83,6 +77,7 @@ export default function Header() {
           </div>
 
           <div className="hamburger_menu_container" />
+          <MobileMenu />
         </div>
       </nav>
     </header>

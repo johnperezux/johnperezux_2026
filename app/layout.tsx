@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './header.css';
 import { Outfit, DM_Sans } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import Footer from '@/components/Footer';

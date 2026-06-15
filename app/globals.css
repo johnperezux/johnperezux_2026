@@ -46,6 +46,10 @@ body {
     color 0.3s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   background-color: var(--selection);
   color: #050817;
@@ -223,10 +227,9 @@ span.hero_link {
 
 a.hero_link:hover,
 a.hero_link:focus {
-  color: var(--accent);
+  color: var(--secondary);
   transition: color 0.5s ease-in-out;
 }
-
 a.hero_link::after {
   content: '';
   position: absolute;
@@ -297,8 +300,34 @@ svg.theme_icon:hover {
   }
 }
 
+svg.theme_icon {
+  transition:
+    fill 0.5s ease-in-out,
+    filter 0.5s ease-in-out;
+}
+
+svg.theme_icon:hover {
+  filter: drop-shadow(0px 0px 2px var(--accent));
+}
+
 /* Scroll Mouse Styles */
 
+.mouse_scroll_svg path {
+  pointer-events: none;
+}
+
+.mouse_scroll_svg {
+  pointer-events: all;
+}
+
+.mouse_path {
+  overflow: visible;
+  transition: filter 0.5s ease-in-out;
+}
+
+.mouse_scroll_svg:hover .mouse_path {
+  filter: drop-shadow(0px 0px 10px var(--accent));
+}
 .mouse_scroll_box {
   display: flex;
   flex-direction: column;
