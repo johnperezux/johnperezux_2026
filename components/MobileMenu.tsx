@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { Logo } from '@/components/Logo';
 import Link from 'next/link';
 
 interface NavLink {
@@ -10,7 +11,7 @@ interface NavLink {
 
 interface MobileNavProps {
   links?: NavLink[];
-  drawerSide?: 'left' | 'right';
+  drawerSide?: 'right' | 'right';
   ctaLabel?: string;
   ctaHref?: string;
 }
@@ -23,7 +24,7 @@ const NAV_LINKS: NavLink[] = [
 
 export default function MobileNav({
   links = NAV_LINKS,
-  drawerSide = 'left',
+  drawerSide = 'right',
   ctaLabel,
   ctaHref,
 }: MobileNavProps) {

@@ -242,7 +242,7 @@ a.hero_link::after {
   transform-origin: var(--origin, left);
   transition: transform 0.4s ease-in-out;
   z-index: -1;
-  box-shadow: 0px 0px 10px 2px var(--accent);
+  /* box-shadow: 0px 0px 10px 1px var(--accent); */
 }
 
 a.hero_link:hover::after {
