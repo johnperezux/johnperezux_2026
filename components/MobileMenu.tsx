@@ -1,8 +1,11 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Logo } from '@/components/Logo';
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import { NAV_LINKS } from '@/components/data/HeaderData';
+import { LightTheme } from './dark_light_mode';
+import { DarkTheme } from './dark_light_mode';
 
 interface NavLink {
   label: string;
@@ -11,16 +14,10 @@ interface NavLink {
 
 interface MobileNavProps {
   links?: NavLink[];
-  drawerSide?: 'right' | 'right';
+  drawerSide?: 'left' | 'right';
   ctaLabel?: string;
   ctaHref?: string;
 }
-
-const NAV_LINKS: NavLink[] = [
-  { label: 'Work', href: '#work' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
-];
 
 export default function MobileNav({
   links = NAV_LINKS,
@@ -28,7 +25,11 @@ export default function MobileNav({
   ctaLabel,
   ctaHref,
 }: MobileNavProps) {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const close = useCallback(() => setIsOpen(false), []);
 
@@ -50,6 +51,15 @@ export default function MobileNav({
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 769px)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (e.matches) setIsOpen(false);
+    };
+    mq.addEventListener('change', handleChange);
+    return () => mq.removeEventListener('change', handleChange);
+  }, []);
+
   return (
     <>
       <button
@@ -59,9 +69,9 @@ export default function MobileNav({
         aria-controls="mobile-drawer"
         className="mobile-nav-trigger"
       >
-        <span className="bar" />
-        <span className="bar" />
-        <span className="bar" />
+        <span className="bar one" />
+        <span className="bar two" />
+        <span className="bar three" />
       </button>
 
       {/* ── Backdrop ── */}
@@ -79,7 +89,25 @@ export default function MobileNav({
         className={`mobile-nav-drawer mobile-nav-drawer--${drawerSide} ${isOpen ? 'is-open' : ''}`}
       >
         <div className="drawer-header">
-          <span className="drawer-title">Menu</span>
+          <div className="theme_toggle_container flex items-center">
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? (
+                  <LightTheme className="theme_icon" />
+                ) : (
+                  <DarkTheme className="theme_icon" />
+                )}
+              </button>
+            )}
+          </div>
           <button
             onClick={close}
             aria-label="Close menu"

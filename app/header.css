@@ -21,7 +21,7 @@
   width: 22px;
   height: 2px;
   border-radius: 2px;
-  background: currentColor;
+  background: var(--accent-two);
 }
 
 /* Backdrop */
@@ -96,7 +96,7 @@
   border-radius: 6px;
   background: transparent;
   cursor: pointer;
-  color: #555;
+  color: var(--secondary);
 }
 .drawer-links {
   list-style: none;
@@ -104,11 +104,34 @@
   padding: 12px 0;
   flex: 1;
 }
+
 .drawer-link {
+  position: relative;
   display: flex;
   padding: 13px 24px;
   font-size: 15px;
   font-weight: 500;
+  overflow: hidden;
+}
+
+.drawer-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: var(--origin, left);
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.drawer-link:hover::after {
+  transform: scaleX(1);
+}
+
+.drawer-link:hover span {
+  color: var(--background);
+  transition: color 0.4s ease-in-out;
 }
 
 /* CTA slot */

@@ -225,12 +225,12 @@ span.hero_link {
   z-index: 1;
 }
 
-a.hero_link:hover,
+a.hero_link.desktop:hover,
 a.hero_link:focus {
   color: var(--secondary);
   transition: color 0.5s ease-in-out;
 }
-a.hero_link::after {
+a.hero_link.desktop::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -383,6 +383,45 @@ svg.theme_icon:hover {
   }
   100% {
     opacity: 0.15;
+  }
+}
+
+/*********************
+Hero Styles 
+**********************/
+
+span.animate_on_scroll {
+  animation: fadeSlideUp 0.6s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+h1.animate_on_scroll {
+  animation: fadeSlideUp 0.6s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+p.animate_on_scroll {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+a.animate_on_scroll {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

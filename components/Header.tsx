@@ -46,7 +46,7 @@ export default function Header() {
             {NAV_LINKS.map(({ label, href }) => (
               <a
                 key={href}
-                className="hero_link"
+                className="hero_link desktop"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 href={href}
@@ -55,7 +55,7 @@ export default function Header() {
               </a>
             ))}
 
-            <div className="theme_toggle_container">
+            <div className="theme_toggle_container flex items-center">
               {mounted && (
                 <button
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

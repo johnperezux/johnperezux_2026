@@ -12,13 +12,13 @@ export default function Hero() {
 
       <div className="hero_container w-100% h-100% flex items-center justify-center">
         <div className="hero_content w-100% max-w-[777px] text-center m-auto">
-          <span className="hero">Designer & Developer</span>
-          <h1>Johnathan Perez</h1>
-          <p className="hero">
+          <span className="hero animate_on_scroll">Designer & Developer</span>
+          <h1 className="animate_on_scroll">Johnathan Perez</h1>
+          <p className="hero animate_on_scroll">
             Designing intuitive experiences and building scalable web solutions
             across WordPress and full-stack development.
           </p>
-          <a href="#projects" className="hero_button">
+          <a href="#projects" className="hero_button animate_on_scroll">
             <span className="button_text">See what i've built</span>
             <span className="button_arrow">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
