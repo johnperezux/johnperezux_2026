@@ -1,17 +1,19 @@
+'use client';
+
 import Hero from '@/components/Hero';
 import Button from '@/components/Button';
 import Cards from '@/components/Cards';
 import Work from '@/components/Work';
 import Testimonial from '@/components/Testimonial';
 import TextBlock from '@/components/TextBlock';
-import Preloader from '@/components/Preloader';
 import ConnectFooter from '@/icons/ConnectFooter';
+import { useInView } from '@/app/hooks/useInView';
 
 export default function Home() {
+  const { ref, inView } = useInView();
+
   return (
     <main className="main_content">
-      {/* <Preloader /> */}
-
       <Hero />
       {/* Intro Section */}
       <section className="intro_section">
@@ -27,13 +29,16 @@ export default function Home() {
             cta={
               <Button
                 className="default"
-                label="Let’s Connect"
+                label="Let's Connect"
                 href="#projects"
               />
             }
           />
-          <div className="see_work_container mt-[1px] flex items-center justify-center flex-col gap-[15px]">
-            <span className="see_work_line"></span>
+          <div
+            ref={ref}
+            className="see_work_container mt-[1px] flex items-center justify-center flex-col gap-[15px]"
+          >
+            <span className={`see_work_line ${inView ? 'animate' : ''}`}></span>
           </div>
         </div>
       </section>
@@ -58,7 +63,7 @@ export default function Home() {
               <div className="m-auto text-center">
                 <Button
                   className="default"
-                  label="Let’s Connect"
+                  label="Let's Connect"
                   href="#projects"
                 />
               </div>
@@ -66,7 +71,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/*/Testimonial Section */}
+      {/* Testimonial Section */}
       <section className="testimonial_section" id="testimonial">
         <div className="testimonial_container container margin_top_container">
           <TextBlock
@@ -77,14 +82,14 @@ export default function Home() {
         </div>
         <Testimonial />
       </section>
-      {/*/Let's Connect Section */}
+      {/* Let's Connect Section */}
       <section className="connect_section" id="connect">
         <div className="connect_container container margin_top_container">
           <TextBlock
             heading="Let's Connect on LinkedIn"
             spanText="LinkedIn"
             spanColor="var(--accent)"
-            paragraph="Looking for a developer who can bridge the gap between stunning design and clean code? I’m currently available for freelance contracts and full-time opportunities. Let’s connect to discuss how I can help bring your next digital product to life."
+            paragraph="Looking for a developer who can bridge the gap between stunning design and clean code? I'm currently available for freelance contracts and full-time opportunities. Let's connect to discuss how I can help bring your next digital product to life."
           />
           <div className="after_content_svg">
             <ConnectFooter />

@@ -462,6 +462,9 @@ Home Intro Styles
     )
     10%;
   margin-bottom: 12px;
+  /* animation: drawLine 1.2s ease-out forwards; */
+}
+.see_work_line.animate {
   animation: drawLine 1.2s ease-out forwards;
 }
 
@@ -495,7 +498,7 @@ Tools Section Styles
 .tool_card:hover {
   transform: translateY(-8px);
   border: 2px solid var(--accent);
-  box-shadow: 0 10px 20px rgba(237, 62, 51, 0.2);
+  box-shadow: 0 0 20px var(--accent);
 }
 
 .cards_grid {
@@ -646,6 +649,18 @@ Testimonial Section Styles
 .quote_icon_container svg {
   fill: var(--accent);
 }
+
+/* .review_card {
+  border: 2px solid transparent;
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review_card:hover {
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+} */
 
 /*********************
 Footer Styles 
