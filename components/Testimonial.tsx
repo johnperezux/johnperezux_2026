@@ -30,7 +30,7 @@ const Testimonial = ({
              transition-all duration-300 ease-in-out 
              hover:border-[var(--accent)] relative"
     >
-      <div className="review_item flex flex-col gap-[30px] p-[30px] z-1">
+      <div className="review_item flex flex-col gap-[30px] p-[30px] z-1 cursor-pointer">
         <div className="name_title">
           <h4>{name}</h4>
           <span style={{ color: 'var(--accent)', fontSize: '1rem' }}>
@@ -95,7 +95,10 @@ const Modal = ({
         style={{ backgroundColor: 'var(--foreground)' }}
         className="max-w-[600px] w-full rounded-[17px] p-[30px] flex flex-col gap-[20px] relative"
       >
-        <button onClick={onClose} className="absolute top-4 right-4 text-2xl">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-2xl cursor-pointer"
+        >
           &times;
         </button>
         <div className="name_title">
@@ -152,10 +155,18 @@ const Testimonials = () => {
           className="review_marquee_reverse flex gap-[30px] w-max"
         >
           {testimonialsData.map((testimonial) => (
-            <Testimonial key={testimonial.id} {...testimonial} />
+            <Testimonial
+              key={testimonial.id}
+              {...testimonial}
+              onClick={() => setSelected(testimonial)}
+            />
           ))}
           {testimonialsData.map((testimonial) => (
-            <Testimonial key={`dupe-${testimonial.id}`} {...testimonial} />
+            <Testimonial
+              key={`dupe-${testimonial.id}`}
+              {...testimonial}
+              onClick={() => setSelected(testimonial)}
+            />
           ))}
         </div>
       </div>

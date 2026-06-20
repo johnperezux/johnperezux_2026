@@ -498,7 +498,7 @@ Tools Section Styles
 .tool_card:hover {
   transform: translateY(-8px);
   border: 2px solid var(--accent);
-  box-shadow: 0 0 20px var(--accent);
+  /* box-shadow: 0 0 20px var(--accent); */
 }
 
 .cards_grid {
@@ -579,7 +579,7 @@ a.work_link:hover .work_title_icon svg {
 
 .see_more_btn {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   pointer-events: none;
   width: 100px;
   height: 100px;
@@ -592,7 +592,9 @@ a.work_link:hover .work_title_icon svg {
   color: white;
   font-size: 14px;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
 }
 
 .see_more_btn::after {
@@ -608,6 +610,7 @@ a.work_link:hover .work_title_icon svg {
 }
 
 a.work_link:hover .see_more_btn {
+  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 

@@ -27,6 +27,18 @@ export default function Hero() {
             </span>
           </a>
         </div>
+        {/* <div className="available_work rotate-90">
+          <a
+            className="hero_link"
+            href="https://www.linkedin.com/in/johnperezux/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="bright_dot hero_link flex items-center">
+              Available for Hire
+            </span>
+          </a>
+        </div> */}
       </div>
     </section>
   );

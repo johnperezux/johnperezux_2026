@@ -5,6 +5,7 @@ import { Outfit, DM_Sans } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import Footer from '@/components/Footer';
 import { Logo } from '@/components/Logo';
+import SmoothScroll from '@/components/SmoothScroll';
 
 const outfit = Outfit({
   variable: '--font-outfit',
@@ -38,7 +39,7 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange={false}
         >
-          {children}
+          <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>
         <Footer />
       </body>
