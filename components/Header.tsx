@@ -37,12 +37,26 @@ export default function Header() {
       <nav>
         <div className="header_container flex justify-between flex-row items-center">
           <div className="header_logo_container">
-            <a href="#home">
+            <a href="/">
               <Logo className="header_logo" />
             </a>
           </div>
 
           <div className="header_links_container flex flex-row gap-[60px]">
+            <div className="available_work">
+              <a
+                className="hero_link desktop"
+                href="https://www.linkedin.com/in/johnperezux/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <span className="bright_dot hero_link flex items-center">
+                  Available for Hire
+                </span>
+              </a>
+            </div>
             {NAV_LINKS.map(({ label, href }) => (
               <a
                 key={href}

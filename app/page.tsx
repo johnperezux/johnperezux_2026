@@ -60,13 +60,13 @@ export default function Home() {
                 paragraph="I Graduated From The University Of Central Florida With A Bachelor's Degree In Web & Social Platforms. Throughout My Journey In School, I Learned How To Develop Websites Using Coding Languages And Various Frameworks."
               />
               <Work />
-              <div className="m-auto text-center">
+              {/* <div className="m-auto text-center">
                 <Button
                   className="default"
                   label="Let's Connect"
                   href="#projects"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function Home() {
                 className="default mb-[60px]"
                 label="Let's Connect"
                 href="https://www.linkedin.com/in/johnperezux/"
-                target="__blank"
+                target="_blank"
               />
             }
           />

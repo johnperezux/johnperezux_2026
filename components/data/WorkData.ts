@@ -11,14 +11,14 @@ export const workData: WorkData[] = [
     id: 1,
     workTitle: 'Spicelopedia',
     workIcon: 'spicelopedia',
-    workType: 'Design, Development',
+    workType: 'Design, Development, E-Commerce',
     workURL: 'https://www.spicelopedia.com/',
   },
   {
     id: 2,
     workTitle: '602 Enterprises',
     workIcon: 'enterprise',
-    workType: 'Design, Development',
+    workType: 'Design, Development, Icongraphy',
     workURL: 'https://www.602enterprises.com/',
   },
   {

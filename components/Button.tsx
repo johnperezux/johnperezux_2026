@@ -3,12 +3,21 @@ interface ButtonProps {
   href: string;
   className?: string;
   variant?: 'hero' | 'default';
+  target?: string;
 }
 
-export default function Button({ label, href, className, variant = 'default' }: ButtonProps) {  return (
+export default function Button({
+  label,
+  href,
+  className,
+  variant = 'default',
+  target,
+}: ButtonProps) {
+  return (
     <a
       href={href}
-       className={`hero_button ${className ?? `button--${variant}`}`}
+      target={target}
+      className={`hero_button ${className ?? `button--${variant}`}`}
     >
       <span className="button_text">{label}</span>
       <span className="button_arrow">

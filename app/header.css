@@ -123,6 +123,7 @@
   transform-origin: var(--origin, left);
   transition: transform 0.4s ease-in-out;
   z-index: -1;
+  pointer-events: none;
 }
 
 .drawer-link:hover::after {

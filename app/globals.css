@@ -12,7 +12,7 @@ Root Styles
   --font-outfit: var(--font-outfit);
   --font-dm-sans: var(--font-dm-sans);
   --font-size-p-large: clamp(1.15rem, 5vw, 1.875rem);
-  --selection: rgb(212, 61, 162);
+  --selection: rgb(206, 108, 255);
   --selection-color: rgb(0, 0, 0);
 }
 
@@ -226,7 +226,8 @@ span.hero_link {
 }
 
 a.hero_link.desktop:hover,
-a.hero_link:focus {
+a.hero_link:focus,
+a.hero_link.desktop:hover span {
   color: var(--secondary);
   transition: color 0.5s ease-in-out;
 }
@@ -258,11 +259,11 @@ span.bright_dot.hero_link::before {
   display: inline-flex;
   width: 10px;
   height: 10px;
-  background-color: #32b246;
+  background-color: var(--selection);
   border-radius: 100%;
   margin-right: 15px;
   align-items: center;
-  box-shadow: 0 0 6px 2px #57ca68;
+  box-shadow: 0 0 6px 2px var(--selection);
   animation: pulse-glow 2s infinite ease-in-out;
 }
 
@@ -270,14 +271,14 @@ span.bright_dot.hero_link::before {
   0%,
   100% {
     box-shadow:
-      0 0 10px #57ca68,
-      0 0 20px #57ca68;
+      0 0 10px var(--selection),
+      0 0 20px var(--selection);
   }
   50% {
     box-shadow:
-      0 0 12px #57ca68,
-      0 0 24px #57ca68,
-      0 0 32px #57ca68;
+      0 0 12px var(--selection),
+      0 0 24px var(--selection),
+      0 0 32px var(--selection);
   }
 }
 

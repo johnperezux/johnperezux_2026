@@ -18,8 +18,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'John Perez — UX Designer',
+  title: 'John Perez | Designer & Developer',
   description: 'UX Designer crafting clean, user-centered web experiences.',
+  icons: {
+    icon: '@/public/FavIcon.png',
+  },
 };
 
 export default function RootLayout({
