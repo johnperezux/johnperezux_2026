@@ -90,6 +90,14 @@ export default function Home() {
             spanText="LinkedIn"
             spanColor="var(--accent)"
             paragraph="Looking for a developer who can bridge the gap between stunning design and clean code? I'm currently available for freelance contracts and full-time opportunities. Let's connect to discuss how I can help bring your next digital product to life."
+            cta={
+              <Button
+                className="default mb-[60px]"
+                label="Let's Connect"
+                href="https://www.linkedin.com/in/johnperezux/"
+                target="__blank"
+              />
+            }
           />
           <div className="after_content_svg">
             <ConnectFooter />

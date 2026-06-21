@@ -673,6 +673,16 @@ Footer Styles
   height: auto;
 }
 
+a.social_footer_svg svg {
+  fill: var(--accent-two);
+  transition:
+    fill 0.5s ease-in-out,
+    filter 0.5s ease-in-out;
+}
+a.social_footer_svg:hover svg {
+  fill: var(--accent);
+}
+
 /*********************
 Media Query Styles 
 **********************/
@@ -707,9 +717,13 @@ Media Query Styles
     height: auto;
   }
 
-  .work_title_icon svg,
   .work_title_icon {
     width: 100%;
+    height: auto;
+  }
+
+  .work_title_icon svg {
+    width: 70%;
     height: auto;
   }
 }
