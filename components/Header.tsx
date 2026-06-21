@@ -33,15 +33,17 @@ export default function Header() {
   };
 
   return (
+    // Header Start//
     <header>
       <nav>
         <div className="header_container flex justify-between flex-row items-center">
+          {/* //Logo */}
           <div className="header_logo_container">
             <a href="/">
               <Logo className="header_logo" />
             </a>
           </div>
-
+          {/* Links */}
           <div className="header_links_container flex flex-row gap-[60px]">
             <div className="available_work">
               <a
@@ -89,11 +91,12 @@ export default function Header() {
               )}
             </div>
           </div>
-
+          {/* Mobile Menu Items */}
           <div className="hamburger_menu_container" />
           <MobileMenu />
         </div>
       </nav>
     </header>
+    // Header End//
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import Hero from '@/components/PageHero';
+import PageHero from '@/components/PageHero';
 import Button from '@/components/Button';
 import { useInView } from '@/app/hooks/useInView';
 
@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <main className="main_content">
-      <Hero />
+      <PageHero />
     </main>
   );
 }
