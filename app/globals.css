@@ -685,6 +685,22 @@ a.social_footer_svg:hover svg {
 }
 
 /*********************
+Work Styles 
+**********************/
+
+.page_hero {
+  height: 500px;
+}
+.work_icon svg {
+  width: 100%;
+  height: auto;
+  color: var(--accent-two);
+}
+a.work_grid_link.work_link {
+  width: 100%;
+}
+
+/*********************
 Media Query Styles 
 **********************/
 
