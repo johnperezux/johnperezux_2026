@@ -52,7 +52,7 @@ const WorkGrid = ({
 
 const WorksGrid = () => {
   return (
-    <div className="work_grid flex gap-[60px] justify-between">
+    <div className="work_grid">
       {workData.map((work) => (
         <WorkGrid
           key={work.id}

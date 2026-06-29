@@ -688,6 +688,11 @@ a.social_footer_svg:hover svg {
 Work Styles 
 **********************/
 
+.work_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
 .page_hero {
   height: 500px;
 }

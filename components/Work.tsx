@@ -5,11 +5,15 @@ import { workData, WorkData } from './data/WorkData';
 import SpicelopediaLogo from '../icons/work/SpicelopediaLogo';
 import EnterpriseLogo from '../icons/work/EnterpriseLogo';
 import KeyLimeLogo from '../icons/work/KeyLimeLogo';
+import PfcuLogo from '../icons/work/PfcuLogo';
+import FtriLogo from '../icons/work/FtriLogo';
 
 const workIconMap: Record<string, React.ReactNode> = {
   spicelopedia: <SpicelopediaLogo />,
   enterprise: <EnterpriseLogo />,
   keylime: <KeyLimeLogo />,
+  pfcu: <PfcuLogo />,
+  ftri: <FtriLogo />,
 };
 
 const Work = ({
@@ -46,7 +50,7 @@ const Work = ({
           </div>
           <p className="work_type">{workType}</p>
         </div>
-        <div className="see_more_btn" ref={btnRef}>
+        <div className="see_more_btn z-0" ref={btnRef}>
           see more
         </div>
       </div>

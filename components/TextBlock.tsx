@@ -10,7 +10,7 @@ interface BlockProps {
 export default function TextBlock({
   heading,
   spanText,
-  spanColor = "var(--accent)",
+  spanColor = 'var(--accent)',
   paragraph,
   className,
   cta,
@@ -29,7 +29,9 @@ export default function TextBlock({
   };
 
   return (
-    <div className={`w-full max-w-[777px] m-auto text-center ${className ?? ""}`}>
+    <div
+      className={`w-full max-w-[777px] m-auto text-center ${className ?? ''}`}
+    >
       <h2>{renderHeading()}</h2>
       {paragraph && <p className="intro_text mb-[60px]">{paragraph}</p>}
       {cta && cta}
