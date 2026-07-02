@@ -2,15 +2,7 @@
 
 import { useRef } from 'react';
 import { workData, WorkData } from './data/WorkData';
-import SpicelopediaLogo from '../icons/work/SpicelopediaLogo';
-import EnterpriseLogo from '../icons/work/EnterpriseLogo';
-import KeyLimeLogo from '../icons/work/KeyLimeLogo';
-
-const workIconMap: Record<string, React.ReactNode> = {
-  spicelopedia: <SpicelopediaLogo />,
-  enterprise: <EnterpriseLogo />,
-  keylime: <KeyLimeLogo />,
-};
+import { workIconMap } from './data/workIconMap';
 
 const WorkGrid = ({
   workTitle,
@@ -18,6 +10,8 @@ const WorkGrid = ({
   workType,
   workURL,
 }: Omit<WorkData, 'id'>) => {
+  const icon = workIconMap[workIcon];
+
   const btnRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -40,7 +34,7 @@ const WorkGrid = ({
     >
       <div className="work_grid_item">
         <div className="work_grid_inner_item">
-          <div className="work_icon">{workIconMap[workIcon]}</div>
+          <div className="work_icon">{icon}</div>
         </div>
         <div className="see_more_btn" ref={btnRef}>
           see more

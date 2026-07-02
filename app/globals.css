@@ -575,7 +575,22 @@ a.work_link:hover p {
 }
 
 a.work_link:hover .work_title_icon svg {
-  color: var(--accent);
+  color: var(--foreground);
+}
+
+.work_title_icon svg {
+  color: var(--accent-two);
+  transition: color 0.3s ease-in-out;
+}
+
+.work_title_icon path.logo_accent {
+  fill: var(--background);
+  transition: fill 0.3s ease-in-out;
+}
+
+/*Paths*/
+a.work_link:hover .work_title_icon path.logo_accent {
+  fill: var(--secondary);
 }
 
 .see_more_btn {
@@ -699,10 +714,24 @@ Work Styles
 .work_icon svg {
   width: 100%;
   height: auto;
-  color: var(--accent-two);
+  color: var(--accent-two) !important;
+  transition: color 0.3s ease-in-out;
 }
 a.work_grid_link.work_link {
   width: 100%;
+}
+
+.work_grid_item:hover .work_icon svg {
+  color: var(--foreground) !important;
+}
+
+.work_icon path.logo_accent {
+  fill: var(--background);
+  transition: fill 0.3s ease-in-out;
+}
+
+.work_grid_item:hover .work_icon path.logo_accent {
+  fill: var(--secondary);
 }
 
 /*********************

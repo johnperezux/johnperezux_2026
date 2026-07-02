@@ -2,19 +2,8 @@
 
 import { useRef } from 'react';
 import { workData, WorkData } from './data/WorkData';
-import SpicelopediaLogo from '../icons/work/SpicelopediaLogo';
-import EnterpriseLogo from '../icons/work/EnterpriseLogo';
-import KeyLimeLogo from '../icons/work/KeyLimeLogo';
-import PfcuLogo from '../icons/work/PfcuLogo';
-import FtriLogo from '../icons/work/FtriLogo';
 
-const workIconMap: Record<string, React.ReactNode> = {
-  spicelopedia: <SpicelopediaLogo />,
-  enterprise: <EnterpriseLogo />,
-  keylime: <KeyLimeLogo />,
-  pfcu: <PfcuLogo />,
-  ftri: <FtriLogo />,
-};
+import { workIconMap } from './data/workIconMap';
 
 const Work = ({
   workTitle,
@@ -59,9 +48,11 @@ const Work = ({
 };
 
 const Works = () => {
+  const recentWork = workData.slice(0, 5);
+
   return (
     <div className="work_list flex flex-col mt-[60px] mb-[60px]">
-      {workData.map((work) => (
+      {recentWork.map((work) => (
         <Work
           key={work.id}
           workTitle={work.workTitle}
