@@ -8,6 +8,21 @@ export interface WorkData {
 
 export const workData: WorkData[] = [
   {
+    id: 5,
+    workTitle: 'FTRI',
+    workIcon: 'ftri',
+    workType: 'development',
+    workURL: 'https://ftri.org/',
+  },
+  {
+    id: 2,
+    workTitle: '602 Enterprises',
+    workIcon: 'enterprise',
+    workType: 'design, development',
+    workURL:
+      'https://www.behance.net/gallery/217005833/602-Enterprises-Case-Study',
+  },
+  {
     id: 1,
     workTitle: 'Spicelopedia',
     workIcon: 'spicelopedia',
@@ -15,45 +30,24 @@ export const workData: WorkData[] = [
     workURL: 'https://www.spicelopedia.com/',
   },
   {
-    id: 2,
-    workTitle: '602 Enterprises',
-    workIcon: 'enterprise',
-    workType: 'print',
-    workURL: 'https://www.602enterprises.com/',
-  },
-  {
-    id: 3,
-    workTitle: 'Keylime Life',
-    workIcon: 'keylime',
-    workType: 'culinary',
-    workURL: 'https://www.spicelopedia.com/',
-  },
-  {
     id: 4,
     workTitle: 'Complete Communications',
-    workIcon: 'keylime',
-    workType: 'technology',
-    workURL: 'https://www.spicelopedia.com/',
-  },
-  {
-    id: 5,
-    workTitle: 'FTRI',
-    workIcon: 'ftri',
-    workType: 'technology',
-    workURL: 'https://www.spicelopedia.com/',
+    workIcon: 'cc',
+    workType: 'development',
+    workURL: 'https://completecommonline.com/',
   },
   {
     id: 6,
     workTitle: 'PFCU',
     workIcon: 'pfcu',
-    workType: 'finance',
-    workURL: 'https://www.spicelopedia.com/',
+    workType: 'development, landing page',
+    workURL: 'https://join.pfcu.com/heloc/',
   },
   {
     id: 7,
     workTitle: 'FLCU',
     workIcon: 'keylime',
-    workType: 'finance',
-    workURL: 'https://www.spicelopedia.com/',
+    workType: 'design, development, landing page',
+    workURL: 'https://joinus.flcu.org/credit-cards/',
   },
 ];

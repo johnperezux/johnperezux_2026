@@ -486,9 +486,8 @@ Tools Section Styles
   background-color: var(--foreground);
   padding: 30px;
   border-radius: 20px;
-  transition:
-    transform 0.6s ease,
-    box-shadow 0.6s ease;
+  transition: all 0.3s ease-in-out;
+
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -499,7 +498,6 @@ Tools Section Styles
 .tool_card:hover {
   transform: translateY(-8px);
   border: 2px solid var(--accent);
-  /* box-shadow: 0 0 20px var(--accent); */
 }
 
 .cards_grid {

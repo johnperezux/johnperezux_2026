@@ -3,6 +3,7 @@ import EnterpriseLogo from '../../icons/work/EnterpriseLogo';
 import KeyLimeLogo from '../../icons/work/KeyLimeLogo';
 import PfcuLogo from '../../icons/work/PfcuLogo';
 import FtriLogo from '../../icons/work/FtriLogo';
+import CcIcon from '../../icons/work/CcIcon';
 
 export const workIconMap: Record<string, React.ReactNode> = {
   spicelopedia: <SpicelopediaLogo />,
@@ -10,4 +11,5 @@ export const workIconMap: Record<string, React.ReactNode> = {
   keylime: <KeyLimeLogo />,
   pfcu: <PfcuLogo />,
   ftri: <FtriLogo />,
+  cc: <CcIcon />,
 };

@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { workData, WorkData } from './data/WorkData';
 
 import { workIconMap } from './data/workIconMap';
@@ -48,7 +48,7 @@ const Work = ({
 };
 
 const Works = () => {
-  const recentWork = workData.slice(0, 5);
+  const recentWork = workData.slice(0, 6);
 
   return (
     <div className="work_list flex flex-col mt-[60px] mb-[60px]">

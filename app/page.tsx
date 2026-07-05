@@ -57,7 +57,7 @@ export default function Home() {
                 heading="Explore My Portfolio"
                 spanText="Portfolio"
                 spanColor="var(--accent)"
-                paragraph="I Graduated From The University Of Central Florida With A Bachelor's Degree In Web & Social Platforms. Throughout My Journey In School, I Learned How To Develop Websites Using Coding Languages And Various Frameworks."
+                paragraph="Check out a collection of websites and digital projects I built and/or designed."
               />
               <Work />
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
             heading="Let's Connect on LinkedIn"
             spanText="LinkedIn"
             spanColor="var(--accent)"
-            paragraph="Looking for a developer who can bridge the gap between stunning design and clean code? I'm currently available for freelance contracts and full-time opportunities. Let's connect to discuss how I can help bring your next digital product to life."
+            paragraph="Looking for a developer who can bridge the gap between stunning design and clean code? I'm currently available for freelance contracts and full-time opportunities. Let's connect to discuss how I can help bring your vision to life."
             cta={
               <Button
                 className="default mb-[60px]"

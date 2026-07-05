@@ -59,13 +59,15 @@ export default function Header() {
                 </span>
               </a>
             </div>
-            {NAV_LINKS.map(({ label, href }) => (
+            {NAV_LINKS.map(({ label, href, target, rel }) => (
               <a
                 key={href}
                 className="hero_link desktop"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 href={href}
+                target={target}
+                rel={rel}
               >
                 <span>{label}</span>
               </a>
