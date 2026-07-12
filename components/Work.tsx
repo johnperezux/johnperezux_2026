@@ -2,7 +2,6 @@
 
 import { useRef, useEffect } from 'react';
 import { workData, WorkData } from './data/WorkData';
-
 import { workIconMap } from './data/workIconMap';
 
 const Work = ({
@@ -12,24 +11,55 @@ const Work = ({
   workURL,
 }: Omit<WorkData, 'id'>) => {
   const btnRef = useRef<HTMLDivElement>(null);
+  const linkRef = useRef<HTMLAnchorElement>(null);
+  const mousePos = useRef({ x: 0, y: 0 });
+  const isHovering = useRef(false);
+
+  const updatePosition = () => {
+    if (!linkRef.current || !btnRef.current) return;
+    const rect = linkRef.current.getBoundingClientRect();
+    const x = mousePos.current.x - rect.left;
+    const y = mousePos.current.y - rect.top;
+    btnRef.current.style.left = `${x}px`;
+    btnRef.current.style.top = `${y}px`;
+  };
+
+  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    isHovering.current = true;
+    mousePos.current = { x: e.clientX, y: e.clientY };
+    updatePosition();
+  };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    if (btnRef.current) {
-      btnRef.current.style.left = `${x}px`;
-      btnRef.current.style.top = `${y}px`;
-    }
+    mousePos.current = { x: e.clientX, y: e.clientY };
+    updatePosition();
   };
+
+  const handleMouseLeave = () => {
+    isHovering.current = false;
+  };
+
+  useEffect(() => {
+    // Only recalculates while actively hovering — keeps the circle
+    // glued to the cursor's real position on the card even when
+    // the mouse itself doesn't move (i.e. the page scrolls instead).
+    const onScroll = () => {
+      if (isHovering.current) updatePosition();
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <a
+      ref={linkRef}
       className="work_link relative"
       href={workURL}
+      onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
-      target="__blank"
+      onMouseLeave={handleMouseLeave}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <div className="work_item">
         <div className="work_inner_item flex flex-col md:flex-row place-content-between items-center gap-[0] flex-wrap">

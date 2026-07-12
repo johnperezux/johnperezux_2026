@@ -63,7 +63,7 @@ export default function Home() {
               <div className="m-auto flex content-center">
                 <Button
                   className="default mb-[60px] m-auto"
-                  label="Check out my Work"
+                  label="Let's Connect"
                   href="https://www.linkedin.com/in/johnperezux/"
                   target="_blank"
                 />

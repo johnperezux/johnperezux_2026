@@ -609,6 +609,7 @@ a.work_link:hover .work_title_icon path.logo_accent {
   transition:
     transform 0.3s ease-in-out,
     opacity 0.3s ease-in-out;
+  z-index: 33;
 }
 
 .see_more_btn::after {
