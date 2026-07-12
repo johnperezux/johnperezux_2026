@@ -57,9 +57,17 @@ export default function Home() {
                 heading="Explore My Portfolio"
                 spanText="Portfolio"
                 spanColor="var(--accent)"
-                paragraph="Check out a collection of websites and digital projects I built and/or designed."
+                paragraph="Explore a curated collection of websites and digital projects I've designed and built as a freelance contractor and as a developer for Evok Advertising, for clients spanning finance, culinary, restaurants, massage, print, and technology."
               />
               <Work />
+              <div className="m-auto flex content-center">
+                <Button
+                  className="default mb-[60px] m-auto"
+                  label="Check out my Work"
+                  href="https://www.linkedin.com/in/johnperezux/"
+                  target="_blank"
+                />
+              </div>
             </div>
           </div>
         </div>
