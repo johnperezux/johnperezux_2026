@@ -1,6 +1,6 @@
 'use client';
 
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useScrollAnimation } from '@/app/hooks/useScrollAnimation';
 
 interface AnimateOnScrollProps {
   children: React.ReactNode;
