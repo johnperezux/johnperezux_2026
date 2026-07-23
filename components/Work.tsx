@@ -40,9 +40,6 @@ const Work = ({
   };
 
   useEffect(() => {
-    // Only recalculates while actively hovering — keeps the circle
-    // glued to the cursor's real position on the card even when
-    // the mouse itself doesn't move (i.e. the page scrolls instead).
     const onScroll = () => {
       if (isHovering.current) updatePosition();
     };
