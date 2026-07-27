@@ -26,7 +26,7 @@ export const workData: WorkData[] = [
     id: 1,
     workTitle: 'Spicelopedia',
     workIcon: 'spicelopedia',
-    workType: 'culinary',
+    workType: 'design, development',
     workURL: 'https://www.spicelopedia.com/',
   },
   {
