@@ -4,6 +4,7 @@ import KeyLimeLogo from '../../icons/work/KeyLimeLogo';
 import PfcuLogo from '../../icons/work/PfcuLogo';
 import FtriLogo from '../../icons/work/FtriLogo';
 import CcIcon from '../../icons/work/CcIcon';
+import ScseLogo from '../../icons/work/ScseLogo';
 
 export const workIconMap: Record<string, React.ReactNode> = {
   spicelopedia: <SpicelopediaLogo />,
@@ -12,4 +13,5 @@ export const workIconMap: Record<string, React.ReactNode> = {
   pfcu: <PfcuLogo />,
   ftri: <FtriLogo />,
   cc: <CcIcon />,
+  seminole: <ScseLogo />,
 };

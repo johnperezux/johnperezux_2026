@@ -23,6 +23,13 @@ export const workData: WorkData[] = [
       'https://www.behance.net/gallery/217005833/602-Enterprises-Case-Study',
   },
   {
+    id: 55,
+    workTitle: 'Supervisor of Elections',
+    workIcon: 'seminole',
+    workType: 'development',
+    workURL: 'https://voteseminole.gov/',
+  },
+  {
     id: 1,
     workTitle: 'Spicelopedia',
     workIcon: 'spicelopedia',
