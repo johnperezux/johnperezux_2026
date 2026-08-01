@@ -11,7 +11,7 @@ export const workData: WorkData[] = [
     id: 5,
     workTitle: 'FTRI',
     workIcon: 'ftri',
-    workType: 'development',
+    workType: 'development as evok',
     workURL: 'https://ftri.org/',
   },
   {
@@ -26,7 +26,7 @@ export const workData: WorkData[] = [
     id: 55,
     workTitle: 'Supervisor of Elections',
     workIcon: 'seminole',
-    workType: 'development',
+    workType: 'development as evok',
     workURL: 'https://voteseminole.gov/',
   },
   {
@@ -40,21 +40,21 @@ export const workData: WorkData[] = [
     id: 4,
     workTitle: 'Complete Communications',
     workIcon: 'cc',
-    workType: 'development',
+    workType: 'development as evok',
     workURL: 'https://completecommonline.com/',
   },
   {
     id: 6,
     workTitle: 'PFCU',
     workIcon: 'pfcu',
-    workType: 'development, landing page',
+    workType: 'development as evok, landing page',
     workURL: 'https://join.pfcu.com/heloc/',
   },
   {
     id: 7,
     workTitle: 'FLCU',
     workIcon: 'keylime',
-    workType: 'design, development, landing page',
+    workType: 'design, development as evok, landing page',
     workURL: 'https://joinus.flcu.org/credit-cards/',
   },
 ];
